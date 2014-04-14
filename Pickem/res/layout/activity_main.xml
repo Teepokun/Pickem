@@ -16,7 +16,7 @@
         android:layout_alignLeft="@+id/Password"
         android:layout_marginBottom="33dp"
         android:ems="10"
-        android:hint="Username" >
+        android:hint="@string/MainActivity_Username" >
 
         <requestFocus />
     </EditText>
@@ -28,7 +28,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/MainActivity_Password"
         android:inputType="textPassword" />
 
     <Button
@@ -38,7 +38,7 @@
         android:layout_alignLeft="@+id/Password"
         android:layout_below="@+id/Password"
         android:layout_marginTop="25dp"
-        android:text="Log In" />
+        android:text="@string/MainActivity_Login" />
 
     <Button
         android:id="@+id/MainActivity_Register_Button"
@@ -48,6 +48,6 @@
         android:layout_alignBottom="@+id/MainActivity_Login_Button"
         android:layout_alignRight="@+id/Password"
         android:layout_marginRight="31dp"
-        android:text="Register" />
+        android:text="@string/MainActivity_Register" />
 
 </RelativeLayout>

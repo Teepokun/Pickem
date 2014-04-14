@@ -14,105 +14,111 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/TextView04"
+            android:id="@+id/RegistrationActivity_FirstNameLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="First Name" />
+            android:text="@string/RegisterActivity_FirstName" />
 
         <EditText
-            android:id="@+id/EditText04"
+            android:id="@+id/RegistrationActivity_FirstName_Entry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10" />
+            android:ems="10"
+            android:inputType="text" />
 
         <TextView
-            android:id="@+id/TextView03"
+            android:id="@+id/RegistrationActivity_LastNameLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Password" />
+            android:layout_marginTop="30dp"
+            android:text="@string/RegisterActivity_LastName" />
 
         <EditText
-            android:id="@+id/EditText03"
+            android:id="@+id/RegistrationActivity_LastName_Entry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" 
+            android:inputType="text" />
+  
+        <TextView
+            android:id="@+id/RegistrationActivity_UsernameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/RegisterActivity_Username" />
+
+        <EditText
+            android:id="@+id/RegistrationActivity_Username_Entry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" 
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/RegistrationActivity_PasswordLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/RegisterActivity_Password" />
+
+        <EditText
+            android:id="@+id/RegistrationActivity_Password_Entry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPassword" />
 
         <TextView
-            android:id="@+id/TextView02"
+            android:id="@+id/RegistrationActivity_ConfirmPasswordLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="First Name" />
+            android:layout_marginTop="30dp"
+            android:text="@string/RegisterActivity_PasswordConf" />
 
         <EditText
-            android:id="@+id/EditText02"
+            android:id="@+id/RegistrationActivity_ConfirmPassword_Entry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10" />
-
+            android:ems="10"
+            android:inputType="textPassword" />
+        
         <TextView
-            android:id="@+id/TextView01"
+            android:id="@+id/RegistrationActivity_EmailLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="First Name" />
+            android:layout_marginTop="30dp"
+            android:text="@string/RegisterActivity_Email" />
 
         <EditText
-            android:id="@+id/EditText01"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10" />
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Username" />
-
-        <EditText
-            android:id="@+id/editText1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10" >
-
-            <requestFocus />
-        </EditText>
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Email" />
-
-        <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/RegistrationActivity_Email_Entry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textEmailAddress" />
+
     </LinearLayout>
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/RegisterActivity_Cancel_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/RegisterActivity_Submit_Button"
+        android:layout_alignBottom="@+id/RegisterActivity_Submit_Button"
+        android:layout_marginLeft="45dp"
+        android:layout_toRightOf="@+id/RegisterActivity_Submit_Button"
+        android:text="@string/RegisterActivity_Cancel" />
+
+    <Button
+        android:id="@+id/RegisterActivity_Submit_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/linearLayout1"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="32dp"
-        android:layout_marginLeft="14dp"
-        android:text="Submit" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_marginLeft="57dp"
-        android:layout_toRightOf="@+id/button1"
-        android:text="Cancel" />
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginLeft="176dp"
+        android:layout_marginTop="42dp"
+        android:text="@string/RegisterActivity_Submit" />
 
 </RelativeLayout>
