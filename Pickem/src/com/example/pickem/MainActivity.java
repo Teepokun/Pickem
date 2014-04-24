@@ -5,6 +5,7 @@ import com.example.pickem.data.SharedObjects;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,6 +36,11 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+    
+    public void onAboutOptionClicked(MenuItem menuItem){}
+    
+    public void onHelpOptionClicked(MenuItem menuItem){}
+    
     
     private void navigateToRegister() {}
     

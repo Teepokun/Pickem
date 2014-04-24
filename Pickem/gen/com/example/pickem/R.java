@@ -49,6 +49,8 @@ public final class R {
         public static final int Username=0x7f080000;
         public static final int action_settings=0x7f080013;
         public static final int linearLayout1=0x7f080004;
+        public static final int menuAboutOption=0x7f080014;
+        public static final int menuHelpOption=0x7f080015;
     }
     public static final class layout {
         public static final int activity_about=0x7f030000;
