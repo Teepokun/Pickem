@@ -14,7 +14,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import android.os.AsyncTask;
 
 public class DBAsyncTask extends AsyncTask<Void, Void, String> {
-	private static final String baseURL = "http://192.168.1.9/scripts/";
+	private static final String baseURL = "http://10.12.118.55/scripts/";
 	//private static final String baseURL = "http://192.168.1.9/scripts/"; 
 	private final List<NameValuePair> nameValuePairs;
 	private final String script;
