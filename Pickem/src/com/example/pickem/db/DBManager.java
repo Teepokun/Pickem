@@ -18,21 +18,25 @@ public class DBManager implements TaskCompletedListener {
 	
 	private TaskCompletedListener listener;
 	
-	public void addUserAccount(String name, String password, String email, TaskCompletedListener listener) throws NullPointerException {
+	public void addUserAccount(String firstname, String lastname, String name, String password, String email, TaskCompletedListener listener) throws NullPointerException {
 		
-		this.listener = listener;
+		final TaskCompletedListener fListener = listener;
 		
 		//verify input
+		if(firstname == null) { throw new NullPointerException("firstname was null");}
+		if(lastname == null) { throw new NullPointerException("lastname was null");}
 		if(name == null) { throw new NullPointerException("name was null");}
 		if(password == null) {throw new NullPointerException("password was null");}
 		if(email == null) {throw new NullPointerException("email was null");}
 		
 		List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(3);  
+		nameValuePairs.add(new BasicNameValuePair("firstname", firstname)); 
+		nameValuePairs.add(new BasicNameValuePair("lastname", lastname)); 
 	    nameValuePairs.add(new BasicNameValuePair("name", name));  
 	    nameValuePairs.add(new BasicNameValuePair("password", password));
 	    nameValuePairs.add(new BasicNameValuePair("email", email));  
 		
-		DBAsyncTask task = new DBAsyncTask("addUserAccount.php", nameValuePairs, this);
+		DBAsyncTask task = new DBAsyncTask("addUserAccount.php", nameValuePairs, fListener);
 		task.execute();
 	}
 	
@@ -118,6 +122,38 @@ public class DBManager implements TaskCompletedListener {
 					Log.v("DBManager", g.toString()); 
 				}
 				tListener.onNotifyTaskCompleted(games);
+			}
+	    	
+	    });
+	    task.execute();
+	}
+	
+	public void userExists(String user, String email, TaskCompletedListener listener) {
+		final TaskCompletedListener tListener = listener;
+		if(user == null) { throw new NullPointerException("home was null");}
+		if(email == null) { throw new NullPointerException("away was null");}
+		
+		List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);  
+	    nameValuePairs.add(new BasicNameValuePair("email", email )); 
+	    nameValuePairs.add(new BasicNameValuePair("user", user )); 
+	    
+	    DBAsyncTask task = new DBAsyncTask("userExists.php", nameValuePairs, new TaskCompletedListener() {
+
+			@Override
+			public void onNotifyTaskCompleted(Object o) {
+				String result[] = null;
+				try {
+					JSONObject object = new JSONObject((String) o);
+					
+					String email = object.getString("email");
+					String user = object.getString("user");
+					
+					result = new String[2];
+					result[0] = email;
+					result[1] = user;
+				} catch (Exception e) {e.printStackTrace();}
+				
+				tListener.onNotifyTaskCompleted(result);
 			}
 	    	
 	    });
