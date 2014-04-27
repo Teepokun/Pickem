@@ -2,8 +2,14 @@ package com.example.pickem;
 
 import com.example.pickem.data.SharedObjects;
 
+import android.app.ActionBar;
 import android.os.Bundle;
+import android.app.ActionBar.Tab;
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,7 +17,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+
+public class MainActivity extends Activity implements ActionBar.TabListener{
 	private EditText userNameEditText;
 	private EditText passwordEditText;
 	private TextView userNameTextView;
@@ -22,12 +29,38 @@ public class MainActivity extends Activity {
 	private Button aboutButton;
 	private SharedObjects shared;
 	
+	private final String tab1Name = "Join a Pool";
+	private final String tab2Name = "Create a Pool";
+	private final String tab3Name = "My Picks";
+	private final String tab4Name = "View Stats";
+	
+	Fragment tab1Fragment;
+	Fragment tab2Fragment;
+	Fragment tab3Fragment;
+	Fragment tab4Fragment;
+
+	
+			
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActionBar actionBar = getActionBar();
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        
+        CreateTab(actionBar, tab1Name);
+        CreateTab(actionBar, tab2Name);
+        CreateTab(actionBar, tab3Name);
+        CreateTab(actionBar, tab4Name);
         setContentView(R.layout.activity_main);
     }
+    
+    private void CreateTab(ActionBar actionBar, String displayName){
+		ActionBar.Tab newTab = actionBar.newTab();
+		newTab.setText(displayName);
+		newTab.setTabListener(this);
+		actionBar.addTab(newTab);
+	}
 
 
     @Override
@@ -36,6 +69,30 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+    
+    public void onCreatePoolFragmentClicked(MenuItem menuItem) {
+        
+    	CreatePoolFragment fragment = new CreatePoolFragment();
+    	FragmentManager fm = getFragmentManager();
+    	FragmentTransaction ft = fm.beginTransaction();
+    	ft.addToBackStack("CreatePool");
+    	
+    	ft.replace(android.R.id.content, fragment);
+     }
+
+    public void onJoinPoolClick(MenuItem menuItem) {
+    	Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    	CreatePoolFragment fragment = new CreatePoolFragment();
+    	FragmentManager fm = getFragmentManager();
+    	FragmentTransaction ft = fm.beginTransaction();
+    	ft.addToBackStack("CreatePool");
+    	
+    	ft.replace(android.R.id.content, fragment);
+     }
+
+  
+    
     
     public void onAboutOptionClicked(MenuItem menuItem){}
     
@@ -52,5 +109,71 @@ public class MainActivity extends Activity {
     	
     	
     }
+
+
+    @Override
+	public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft){
+		CharSequence displayName = tab.getText();
+		if(displayName.equals(tab1Name)){
+			if(tab1Fragment == null){
+				tab1Fragment  = new JoinPoolFragment();
+				ft.add(android.R.id.content, tab1Fragment);
+			}
+			else{
+				ft.attach(tab1Fragment);
+			}
+		}
+		else if(displayName.equals(tab2Name)){
+			if(tab2Fragment == null){
+				tab2Fragment  = new CreatePoolFragment();
+				ft.add(android.R.id.content, tab2Fragment);
+			}
+			else{
+				ft.attach(tab2Fragment);
+			}
+		}
+		
+		else if(displayName.equals(tab3Name)){
+			if(tab3Fragment == null){
+				tab3Fragment  = new PicksFragment();
+				ft.add(android.R.id.content, tab3Fragment);
+			}
+			else{
+				ft.attach(tab3Fragment);
+			}
+		}
+		else if(displayName.equals(tab4Name)){
+			if(tab4Fragment == null){
+				tab4Fragment  = new PicksFragment();
+				ft.add(android.R.id.content, tab4Fragment);
+			}
+			else{
+				ft.attach(tab4Fragment);
+			}
+		}
+	}
+
+  
+  
+	@Override
+	public void onTabReselected(Tab tab, FragmentTransaction ft) {
+		
+	}
+
+	@Override
+	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+		CharSequence displayName = tab.getText();
+
+        if(displayName.equals(tab1Name)) {
+            ft.detach(tab1Fragment);
+        }
+        else if (displayName.equals(tab2Name)) {
+            ft.detach(tab2Fragment);
+        }
+		
+	}
+
+
+
     
 }

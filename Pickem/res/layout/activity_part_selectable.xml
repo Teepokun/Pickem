@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+            android:orientation="vertical">
+    <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:layout_weight="1"
+          android:orientation="horizontal"
+         android:id="@+id/selectableGroup">
+    </LinearLayout>
+
+    <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:layout_weight="1"
+          android:id="@+id/fixedGroup"
+          android:orientation="vertical">
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/logoImage"
+           android:src="@drawable/ic_action_back"
+           android:scaleType="center"
+           />
+        <TextView
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:id="@+id/pluralsightDescription"
+                     android:text="Classroom training is in the past. Our library of developer training videos is as mobile as you are. With our new mobile app, you have access to all our latest content, so that you can learn when and wherever you need it. Say goodbye to the old way of learning, and meet the new face of hardcore developer training."/>
+
+    </LinearLayout>
+</LinearLayout>

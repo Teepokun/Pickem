@@ -12,14 +12,10 @@
     <string name="title_activity_make_picks">MakePicksActivity</string>
     <string name="title_activity_join_pool">Join a Pool</string>
     <string name="title_activity_create_pool">Create a Pool</string>
-    
     <string name="MainActivity_Login">Log In</string>
     <string name="MainActivity_Register">Register</string>
     <string name="MainActivity_Username">Username</string>
     <string name="MainActivity_Password">Password</string>
-    
-    
-    
     <string name="RegisterActivity_FirstName">First Name</string>
     <string name="RegisterActivity_LastName">Last Name</string>
     <string name="RegisterActivity_Username">Username</string>
@@ -28,5 +24,8 @@
     <string name="RegisterActivity_Email">Email Address</string>
     <string name="RegisterActivity_Submit">Submit</string>
     <string name="RegisterActivity_Cancel">Cancel</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 </resources>

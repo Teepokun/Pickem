@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+       <string-array name = "tabTitles">
+        <item>Join</item>
+        <item>Create</item>
+        <item>Picks</item>
+        <item>Stats</item>
+    </string-array>
+	<string-array name = "fragmentNames">
+	    <item>com.example.pickem.JoinPoolFragment</item>
+	    <item>com.example.pickem.CreatePoolFragment</item>
+	    <item>com.example.pickem.PicksFragment</item>
+	    <item>com.example.pickem.UserStatsFragment</item>
+</string-array>    
+    
+    
+</resources>
