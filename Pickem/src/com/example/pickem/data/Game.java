@@ -2,34 +2,29 @@ package com.example.pickem.data;
 
 
 public class Game {
-	private Team home;
-	private Team away;
+	private final String home;
+	private final String away;
+	private final String date;
+	private final String odds;
 	
-	private double odds;
-
-	public Team getHome() {
-		return home;
-	}
-
-	public void setHome(Team home) {
+	public Game(String home, String away, String date, String odds) {
 		this.home = home;
-	}
-
-	public Team getAway() {
-		return away;
-	}
-
-	public void setAway(Team away) {
 		this.away = away;
-	}
-
-	public double getOdds() {
-		return odds;
-	}
-
-	public void setOdds(double odds) {
+		this.date = date;
 		this.odds = odds;
 	}
 	
+	public String getHome() {
+		return home;
+	}
+	public String getAway() {
+		return away;
+	}
+	public String getDate() {
+		return date;
+	}
+	public String getOdds() {
+		return odds;
+	}
 	
 }

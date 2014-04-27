@@ -1,18 +1,19 @@
 package com.example.pickem.data;
 
 public class Pick {
-	private Game game;
-	private Team selection;
-	public Game getGame() {
-		return game;
+	private String gameID;
+	private String selection;
+	
+	public String getGame() {
+		return gameID;
 	}
-	public void setGame(Game game) {
-		this.game = game;
+	public void setGame(String gameID) {
+		this.gameID = gameID;
 	}
-	public Team getSelection() {
+	public String getSelection() {
 		return selection;
 	}
-	public void setSelection(Team selection) {
+	public void setSelection(String selection) {
 		this.selection = selection;
 	}
 	
