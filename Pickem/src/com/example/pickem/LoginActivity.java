@@ -9,9 +9,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -29,12 +27,7 @@ import android.widget.Toast;
  * well.
  */
 public class LoginActivity extends Activity implements TaskCompletedListener {
-	/**
-	 * A dummy authentication store containing known user names and passwords.
-	 * TODO: remove after connecting to a real authentication system.
-	 */
-	private static final String[] DUMMY_CREDENTIALS = new String[] {
-			"foo@example.com:hello", "bar@example.com:world" };
+
 
 	/**
 	 * The default email to populate the email field with.
@@ -48,7 +41,7 @@ public class LoginActivity extends Activity implements TaskCompletedListener {
 	// Values for email and password at the time of the login attempt.
 	private String mEmail;
 	private String mPassword;
-	private String mUser;
+
 
 	// UI references.
 	private EditText mEmailView;
@@ -130,6 +123,7 @@ public class LoginActivity extends Activity implements TaskCompletedListener {
 		mPassword = mPasswordView.getText().toString();
 
 		boolean cancel = false;
+		@SuppressWarnings("unused")
 		View focusView = null;
 
 		// Check for a valid password.
