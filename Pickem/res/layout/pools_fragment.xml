@@ -4,14 +4,48 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    
-    
-    <ListView
-        android:id="@+id/listView1"
+        <TextView
         android:layout_width="match_parent"
-        android:layout_height="317dp" >
-    </ListView>
-
+            android:layout_height="wrap_content"
+            android:id="@+id/poolFragment_poolName"
+            android:text="pool name"/>
+		
+		<TextView
+        android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/poolFragment_commissionerName"
+            android:text="commissioner name"/>
+		
+		<TextView
+        android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/poolFragment_firstPlaceName"
+            android:text="first place name"/>
+		
+		<TextView
+        android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/poolFragment_secondPlaceName"
+            android:text="second place name"/>
+		
+		<TextView
+        android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/poolFragment_thirdPlaceName"
+            android:text="third place name"/>
+		
+		<TextView
+        android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/poolFragment_fourthPlaceName"
+            android:text="fourth place name"/>
+		
+		<TextView
+        android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/poolFragment_secondPlaceName"
+            android:text="fifth place name"/>
+		
     <Button
         android:id="@+id/join_pool_button"
         android:layout_width="wrap_content"
