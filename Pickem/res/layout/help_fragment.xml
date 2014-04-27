@@ -4,10 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
-        <TextView
+    <TextView
         android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/joinPoolFragmentTextView"
-            android:text="Join Fragment Opened"/>
+            android:id="@+id/helpFragmentTextView"
+            android:text="Help Fragment Opened"/>
 
 </LinearLayout>
