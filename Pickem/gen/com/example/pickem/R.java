@@ -28,6 +28,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
 
+         Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
+    
+
          Customize dimensions originally defined in res/values/dimens.xml (such as
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
@@ -59,28 +64,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int RegistrationActivity_UsernameLabel=0x7f0a0012;
         public static final int RegistrationActivity_Username_Entry=0x7f0a0013;
         public static final int aboutFragmentTextView=0x7f0a0000;
-        public static final int action_forgot_password=0x7f0a0022;
-        public static final int action_settings=0x7f0a0021;
+        public static final int action_forgot_password=0x7f0a0025;
+        public static final int action_settings=0x7f0a0024;
         public static final int createPoolFragmentTextView=0x7f0a001c;
+        public static final int create_pool_button=0x7f0a0022;
         public static final int email=0x7f0a0004;
         public static final int fixedGroup=0x7f0a000a;
         public static final int helpFragmentTextView=0x7f0a001d;
         public static final int joinPoolFragmentTextView=0x7f0a001e;
+        public static final int join_pool_button=0x7f0a0021;
         public static final int linearLayout1=0x7f0a000d;
+        public static final int listView1=0x7f0a0020;
         public static final int login=0x7f0a0006;
         public static final int login_form=0x7f0a0003;
         public static final int login_status=0x7f0a0001;
         public static final int login_status_message=0x7f0a0002;
         public static final int logoImage=0x7f0a000b;
-        public static final int menuAboutOption=0x7f0a0023;
-        public static final int menuHelpOption=0x7f0a0024;
+        public static final int menuAboutOption=0x7f0a0026;
+        public static final int menuHelpOption=0x7f0a0027;
         public static final int password=0x7f0a0005;
         public static final int picksFragmentTextView=0x7f0a001f;
         public static final int pluralsightDescription=0x7f0a000c;
         public static final int register_button=0x7f0a0008;
         public static final int selectableGroup=0x7f0a0009;
         public static final int sign_in_button=0x7f0a0007;
-        public static final int statsFragmentTextView=0x7f0a0020;
+        public static final int statsFragmentTextView=0x7f0a0023;
     }
     public static final class layout {
         public static final int about_fragment=0x7f030000;
@@ -99,7 +107,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int help_fragment=0x7f03000d;
         public static final int join_pool_fragment=0x7f03000e;
         public static final int picks_fragment=0x7f03000f;
-        public static final int stats_fragment=0x7f030010;
+        public static final int pools_fragment=0x7f030010;
+        public static final int stats_fragment=0x7f030011;
     }
     public static final class menu {
         public static final int about=0x7f090000;
@@ -110,8 +119,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int main=0x7f090005;
         public static final int make_picks=0x7f090006;
         public static final int picks=0x7f090007;
-        public static final int register=0x7f090008;
-        public static final int user_home=0x7f090009;
+        public static final int pools=0x7f090008;
+        public static final int register=0x7f090009;
+        public static final int user_home=0x7f09000a;
     }
     public static final class string {
         public static final int MainActivity_Login=0x7f07000b;
@@ -126,30 +136,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int RegisterActivity_PasswordConf=0x7f070013;
         public static final int RegisterActivity_Submit=0x7f070015;
         public static final int RegisterActivity_Username=0x7f070011;
-        public static final int action_forgot_password=0x7f07001f;
-        public static final int action_register=0x7f07001e;
+        public static final int action_forgot_password=0x7f070020;
+        public static final int action_register=0x7f07001f;
         public static final int action_settings=0x7f070001;
-        public static final int action_sign_in=0x7f07001d;
+        public static final int action_sign_in=0x7f07001e;
         public static final int app_name=0x7f070000;
         public static final int dummy_button=0x7f070018;
         public static final int dummy_content=0x7f070019;
-        public static final int error_field_required=0x7f070024;
-        public static final int error_incorrect_password=0x7f070023;
-        public static final int error_invalid_email=0x7f070021;
-        public static final int error_invalid_password=0x7f070022;
+        public static final int error_field_required=0x7f070025;
+        public static final int error_incorrect_password=0x7f070024;
+        public static final int error_invalid_email=0x7f070022;
+        public static final int error_invalid_password=0x7f070023;
         public static final int hello_world=0x7f070002;
-        public static final int login_progress_signing_in=0x7f070020;
+        public static final int login_progress_signing_in=0x7f070021;
         /**  Strings related to login 
          */
-        public static final int prompt_email=0x7f07001b;
-        public static final int prompt_password=0x7f07001c;
+        public static final int prompt_email=0x7f07001c;
+        public static final int prompt_password=0x7f07001d;
         public static final int title_activity_about=0x7f070005;
         public static final int title_activity_create_pool=0x7f07000a;
         public static final int title_activity_help=0x7f070004;
         public static final int title_activity_join_pool=0x7f070009;
-        public static final int title_activity_login=0x7f07001a;
+        public static final int title_activity_login=0x7f07001b;
         public static final int title_activity_make_picks=0x7f070008;
         public static final int title_activity_picks=0x7f070007;
+        public static final int title_activity_pools=0x7f07001a;
         public static final int title_activity_register=0x7f070003;
         public static final int title_activity_tab=0x7f070017;
         public static final int title_activity_user_home=0x7f070006;

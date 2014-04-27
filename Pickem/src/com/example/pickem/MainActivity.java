@@ -29,13 +29,11 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
 	private Button aboutButton;
 	private SharedObjects shared;
 	
-	private final String tab1Name = "Join a Pool";
-	private final String tab2Name = "Create a Pool";
+	private final String tab1Name = "Pools";
 	private final String tab3Name = "My Picks";
 	private final String tab4Name = "View Stats";
 	
 	Fragment tab1Fragment;
-	Fragment tab2Fragment;
 	Fragment tab3Fragment;
 	Fragment tab4Fragment;
 
@@ -49,7 +47,6 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         
         CreateTab(actionBar, tab1Name);
-        CreateTab(actionBar, tab2Name);
         CreateTab(actionBar, tab3Name);
         CreateTab(actionBar, tab4Name);
         setContentView(R.layout.activity_main);
@@ -70,25 +67,14 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
         return true;
     }
     
-    public void onCreatePoolFragmentClicked(MenuItem menuItem) {
-        
-    	CreatePoolFragment fragment = new CreatePoolFragment();
-    	FragmentManager fm = getFragmentManager();
-    	FragmentTransaction ft = fm.beginTransaction();
-    	ft.addToBackStack("CreatePool");
-    	
-    	ft.replace(android.R.id.content, fragment);
-    	ft.commit();
-    	
-     }
-
-    public void onJoinPoolClick(MenuItem menuItem) {
+    
+    public void onPoolsClick(MenuItem menuItem) {
     	Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-    	JoinPoolFragment fragment = new JoinPoolFragment();
+    	PoolsFragment fragment = new PoolsFragment();
     	FragmentManager fm = getFragmentManager();
     	FragmentTransaction ft = fm.beginTransaction();
-    	ft.addToBackStack("JoinPool");
+    	ft.addToBackStack("Pools");
     	
     	ft.replace(android.R.id.content, fragment);
     	ft.commit();
@@ -149,20 +135,11 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
 		CharSequence displayName = tab.getText();
 		if(displayName.equals(tab1Name)){
 			if(tab1Fragment == null){
-				tab1Fragment  = new JoinPoolFragment();
+				tab1Fragment  = new PoolsFragment();
 				ft.add(android.R.id.content, tab1Fragment);
 			}
 			else{
 				ft.attach(tab1Fragment);
-			}
-		}
-		else if(displayName.equals(tab2Name)){
-			if(tab2Fragment == null){
-				tab2Fragment  = new CreatePoolFragment();
-				ft.add(android.R.id.content, tab2Fragment);
-			}
-			else{
-				ft.attach(tab2Fragment);
 			}
 		}
 		
@@ -177,7 +154,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
 		}
 		else if(displayName.equals(tab4Name)){
 			if(tab4Fragment == null){
-				tab4Fragment  = new PicksFragment();
+				tab4Fragment  = new UserStatsFragment();
 				ft.add(android.R.id.content, tab4Fragment);
 			}
 			else{
@@ -200,9 +177,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
         if(displayName.equals(tab1Name)) {
             ft.detach(tab1Fragment);
         }
-        else if (displayName.equals(tab2Name)) {
-            ft.detach(tab2Fragment);
-        }
+       
         else if (displayName.equals(tab3Name)) {
             ft.detach(tab3Fragment);
         }

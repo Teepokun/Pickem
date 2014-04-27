@@ -4,7 +4,9 @@ import com.example.pickem.data.SharedObjects;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -28,6 +30,15 @@ public class RegisterActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_register);
+		
+		findViewById(R.id.RegisterActivity_Cancel_Button).setOnClickListener(
+				new View.OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						Intent intent = new Intent(view.getContext(), LoginActivity.class);
+						startActivity(intent);
+					}
+				});
 	}
 
 	@Override
