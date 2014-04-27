@@ -1,23 +1,25 @@
 package com.example.pickem;
 
+import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class PoolsFragment extends Fragment{
+public class PoolsFragment extends Fragment {
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-		
+		setHasOptionsMenu(true);
 	}
 
 	@Override
@@ -26,6 +28,13 @@ public class PoolsFragment extends Fragment{
 		return inflater.inflate(R.layout.pools_fragment, container, false);
 
 	}
+	
+	@Override
+	public void onCreateOptionsMenu(
+			Menu menu, MenuInflater inflater) {
+			inflater.inflate(R.menu.pools, menu);
+	}
+
 	
 	@Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
