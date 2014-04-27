@@ -27,4 +27,14 @@ public class Game {
 		return odds;
 	}
 	
+	public String toString() {
+		String home = "home: " + this.home + "\n";
+		String away = "away: " + this.away + "\n";
+		String date = "date: " + this.date + "\n";
+		String odds = "odds: " + this.odds + "\n";
+		String spacer = "-------------";
+		String result = home + away + date + odds + spacer;
+		return result;
+	}
+	
 }

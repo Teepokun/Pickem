@@ -3,7 +3,7 @@ package com.example.pickem.data;
 import java.util.Vector;
 
 
-public class Pool implements Comparable {
+public class Pool implements Comparable<Object> {
 	private Vector<User> members;
 	private Vector<Conference> conferences;
 	private Commissioner commissioner;

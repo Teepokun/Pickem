@@ -1,7 +1,6 @@
 package com.example.pickem.db;
 
-import java.io.InputStream;
-import java.util.ArrayList;
+
 import java.util.List;
 
 import org.apache.http.HttpResponse;
@@ -13,7 +12,6 @@ import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 
 import android.os.AsyncTask;
-import android.util.Log;
 
 public class DBAsyncTask extends AsyncTask<Void, Void, String> {
 	private static final String baseURL = "http://192.168.1.9/scripts/";
