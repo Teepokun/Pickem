@@ -7,47 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
-
-    <EditText
-        android:id="@+id/Username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/Password"
-        android:layout_alignLeft="@+id/Password"
-        android:layout_marginBottom="33dp"
-        android:ems="10"
-        android:hint="@string/MainActivity_Username" >
-
-        <requestFocus />
-    </EditText>
-
-    <EditText
-        android:id="@+id/Password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:ems="10"
-        android:hint="@string/MainActivity_Password"
-        android:inputType="textPassword" />
-
-    <Button
-        android:id="@+id/MainActivity_Login_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Password"
-        android:layout_below="@+id/Password"
-        android:layout_marginTop="25dp"
-        android:text="@string/MainActivity_Login" />
-
-    <Button
-        android:id="@+id/MainActivity_Register_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/MainActivity_Login_Button"
-        android:layout_alignBottom="@+id/MainActivity_Login_Button"
-        android:layout_alignRight="@+id/Password"
-        android:layout_marginRight="31dp"
-        android:text="@string/MainActivity_Register" />
-
+    
+    
+    
 </RelativeLayout>

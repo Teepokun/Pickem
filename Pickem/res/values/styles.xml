@@ -3,13 +3,13 @@
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
+            backward-compatibility can go here.
         -->
     </style>
 
@@ -32,20 +32,27 @@
         <item name="android:paddingBottom">0dp</item>
         <item name="android:background">@android:drawable/bottom_bar</item>
     </style>
-    
+
     <style name="PSTab" parent="android:style/Widget.Holo.ActionBar.TabView">
         <item name="android:minWidth">200dip</item>
     </style>
+
     <style name="PSTabText" parent="android:style/Widget.Holo.ActionBar.TabText">
         <item name="android:textSize">8sp</item>
         <item name="android:textAllCaps">false</item>
-   </style>
+    </style>
+
     <style name="Theme.Holo.ActionBarScrollable" parent="android:style/Theme.Holo">
         <item name="android:actionBarTabStyle">@style/PSTab</item>
         <item name="android:actionBarTabTextStyle">@style/PSTabText</item>
     </style>
-    
 
     <style name="ButtonBarButton" />
+
+    <style name="LoginFormContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+    </style>
 
 </resources>

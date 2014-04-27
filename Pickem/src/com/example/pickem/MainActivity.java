@@ -78,6 +78,8 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
     	ft.addToBackStack("CreatePool");
     	
     	ft.replace(android.R.id.content, fragment);
+    	ft.commit();
+    	
      }
 
     public void onJoinPoolClick(MenuItem menuItem) {
@@ -89,6 +91,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
     	ft.addToBackStack("JoinPool");
     	
     	ft.replace(android.R.id.content, fragment);
+    	ft.commit();
      }
 
     public void onPicksClick(MenuItem menuItem) {
@@ -100,6 +103,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
     	ft.addToBackStack("Picks");
     	
     	ft.replace(android.R.id.content, fragment);
+    	ft.commit();
      }
     
     public void onUserStatsClick(MenuItem menuItem) {
@@ -111,6 +115,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
     	ft.addToBackStack("Stats");
     	
     	ft.replace(android.R.id.content, fragment);
+    	ft.commit();
      }
   
     
@@ -124,6 +129,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
     	ft.addToBackStack("About");
     	
     	ft.replace(android.R.id.content, fragment);
+    	ft.commit();
     }
     
     public void onHelpOptionClicked(MenuItem menuItem){
@@ -135,20 +141,8 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
     	ft.addToBackStack("Help");
     	
     	ft.replace(android.R.id.content, fragment);
+    	ft.commit();
     }
-    
-    
-    private void navigateToRegister() {}
-    
-    private void navigateToAbout() {}
-    
-    private void navigateToHelp() {}
-    
-    private void onClick(View v) {
-    	
-    	
-    }
-
 
     @Override
 	public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft){
@@ -208,6 +202,12 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
         }
         else if (displayName.equals(tab2Name)) {
             ft.detach(tab2Fragment);
+        }
+        else if (displayName.equals(tab3Name)) {
+            ft.detach(tab3Fragment);
+        }
+        else if (displayName.equals(tab4Name)) {
+            ft.detach(tab4Fragment);
         }
 		
 	}

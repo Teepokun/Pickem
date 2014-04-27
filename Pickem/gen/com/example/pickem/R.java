@@ -44,39 +44,43 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ic_launcher=0x7f020005;
     }
     public static final class id {
-        public static final int MainActivity_Login_Button=0x7f0a0003;
-        public static final int MainActivity_Register_Button=0x7f0a0004;
-        public static final int Password=0x7f0a0002;
-        public static final int RegisterActivity_Cancel_Button=0x7f0a0016;
-        public static final int RegisterActivity_Submit_Button=0x7f0a0017;
-        public static final int RegistrationActivity_ConfirmPasswordLabel=0x7f0a0012;
-        public static final int RegistrationActivity_ConfirmPassword_Entry=0x7f0a0013;
-        public static final int RegistrationActivity_EmailLabel=0x7f0a0014;
-        public static final int RegistrationActivity_Email_Entry=0x7f0a0015;
-        public static final int RegistrationActivity_FirstNameLabel=0x7f0a000a;
-        public static final int RegistrationActivity_FirstName_Entry=0x7f0a000b;
-        public static final int RegistrationActivity_LastNameLabel=0x7f0a000c;
-        public static final int RegistrationActivity_LastName_Entry=0x7f0a000d;
-        public static final int RegistrationActivity_PasswordLabel=0x7f0a0010;
-        public static final int RegistrationActivity_Password_Entry=0x7f0a0011;
-        public static final int RegistrationActivity_UsernameLabel=0x7f0a000e;
-        public static final int RegistrationActivity_Username_Entry=0x7f0a000f;
-        public static final int Username=0x7f0a0001;
+        public static final int RegisterActivity_Cancel_Button=0x7f0a001a;
+        public static final int RegisterActivity_Submit_Button=0x7f0a001b;
+        public static final int RegistrationActivity_ConfirmPasswordLabel=0x7f0a0016;
+        public static final int RegistrationActivity_ConfirmPassword_Entry=0x7f0a0017;
+        public static final int RegistrationActivity_EmailLabel=0x7f0a0018;
+        public static final int RegistrationActivity_Email_Entry=0x7f0a0019;
+        public static final int RegistrationActivity_FirstNameLabel=0x7f0a000e;
+        public static final int RegistrationActivity_FirstName_Entry=0x7f0a000f;
+        public static final int RegistrationActivity_LastNameLabel=0x7f0a0010;
+        public static final int RegistrationActivity_LastName_Entry=0x7f0a0011;
+        public static final int RegistrationActivity_PasswordLabel=0x7f0a0014;
+        public static final int RegistrationActivity_Password_Entry=0x7f0a0015;
+        public static final int RegistrationActivity_UsernameLabel=0x7f0a0012;
+        public static final int RegistrationActivity_Username_Entry=0x7f0a0013;
         public static final int aboutFragmentTextView=0x7f0a0000;
-        public static final int action_settings=0x7f0a001d;
-        public static final int createPoolFragmentTextView=0x7f0a0018;
-        public static final int fixedGroup=0x7f0a0006;
-        public static final int helpFragmentTextView=0x7f0a0019;
-        public static final int joinPoolFragmentTextView=0x7f0a001a;
-        public static final int linearLayout1=0x7f0a0009;
-        public static final int logoImage=0x7f0a0007;
-        public static final int menuAboutOption=0x7f0a001e;
-        public static final int menuHelpOption=0x7f0a001f;
-        public static final int menuJoinPoolFragment=0x7f0a0020;
-        public static final int picksFragmentTextView=0x7f0a001b;
-        public static final int pluralsightDescription=0x7f0a0008;
-        public static final int selectableGroup=0x7f0a0005;
-        public static final int statsFragmentTextView=0x7f0a001c;
+        public static final int action_forgot_password=0x7f0a0022;
+        public static final int action_settings=0x7f0a0021;
+        public static final int createPoolFragmentTextView=0x7f0a001c;
+        public static final int email=0x7f0a0004;
+        public static final int fixedGroup=0x7f0a000a;
+        public static final int helpFragmentTextView=0x7f0a001d;
+        public static final int joinPoolFragmentTextView=0x7f0a001e;
+        public static final int linearLayout1=0x7f0a000d;
+        public static final int login=0x7f0a0006;
+        public static final int login_form=0x7f0a0003;
+        public static final int login_status=0x7f0a0001;
+        public static final int login_status_message=0x7f0a0002;
+        public static final int logoImage=0x7f0a000b;
+        public static final int menuAboutOption=0x7f0a0023;
+        public static final int menuHelpOption=0x7f0a0024;
+        public static final int password=0x7f0a0005;
+        public static final int picksFragmentTextView=0x7f0a001f;
+        public static final int pluralsightDescription=0x7f0a000c;
+        public static final int register_button=0x7f0a0008;
+        public static final int selectableGroup=0x7f0a0009;
+        public static final int sign_in_button=0x7f0a0007;
+        public static final int statsFragmentTextView=0x7f0a0020;
     }
     public static final class layout {
         public static final int about_fragment=0x7f030000;
@@ -84,28 +88,30 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int activity_create_pool=0x7f030002;
         public static final int activity_help=0x7f030003;
         public static final int activity_join_pool=0x7f030004;
-        public static final int activity_main=0x7f030005;
-        public static final int activity_make_picks=0x7f030006;
-        public static final int activity_part_selectable=0x7f030007;
-        public static final int activity_picks=0x7f030008;
-        public static final int activity_register=0x7f030009;
-        public static final int activity_user_home=0x7f03000a;
-        public static final int create_pool_fragment=0x7f03000b;
-        public static final int help_fragment=0x7f03000c;
-        public static final int join_pool_fragment=0x7f03000d;
-        public static final int picks_fragment=0x7f03000e;
-        public static final int stats_fragment=0x7f03000f;
+        public static final int activity_login=0x7f030005;
+        public static final int activity_main=0x7f030006;
+        public static final int activity_make_picks=0x7f030007;
+        public static final int activity_part_selectable=0x7f030008;
+        public static final int activity_picks=0x7f030009;
+        public static final int activity_register=0x7f03000a;
+        public static final int activity_user_home=0x7f03000b;
+        public static final int create_pool_fragment=0x7f03000c;
+        public static final int help_fragment=0x7f03000d;
+        public static final int join_pool_fragment=0x7f03000e;
+        public static final int picks_fragment=0x7f03000f;
+        public static final int stats_fragment=0x7f030010;
     }
     public static final class menu {
         public static final int about=0x7f090000;
         public static final int create_pool=0x7f090001;
         public static final int help=0x7f090002;
         public static final int join_pool=0x7f090003;
-        public static final int main=0x7f090004;
-        public static final int make_picks=0x7f090005;
-        public static final int picks=0x7f090006;
-        public static final int register=0x7f090007;
-        public static final int user_home=0x7f090008;
+        public static final int login=0x7f090004;
+        public static final int main=0x7f090005;
+        public static final int make_picks=0x7f090006;
+        public static final int picks=0x7f090007;
+        public static final int register=0x7f090008;
+        public static final int user_home=0x7f090009;
     }
     public static final class string {
         public static final int MainActivity_Login=0x7f07000b;
@@ -120,15 +126,28 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int RegisterActivity_PasswordConf=0x7f070013;
         public static final int RegisterActivity_Submit=0x7f070015;
         public static final int RegisterActivity_Username=0x7f070011;
+        public static final int action_forgot_password=0x7f07001f;
+        public static final int action_register=0x7f07001e;
         public static final int action_settings=0x7f070001;
+        public static final int action_sign_in=0x7f07001d;
         public static final int app_name=0x7f070000;
         public static final int dummy_button=0x7f070018;
         public static final int dummy_content=0x7f070019;
+        public static final int error_field_required=0x7f070024;
+        public static final int error_incorrect_password=0x7f070023;
+        public static final int error_invalid_email=0x7f070021;
+        public static final int error_invalid_password=0x7f070022;
         public static final int hello_world=0x7f070002;
+        public static final int login_progress_signing_in=0x7f070020;
+        /**  Strings related to login 
+         */
+        public static final int prompt_email=0x7f07001b;
+        public static final int prompt_password=0x7f07001c;
         public static final int title_activity_about=0x7f070005;
         public static final int title_activity_create_pool=0x7f07000a;
         public static final int title_activity_help=0x7f070004;
         public static final int title_activity_join_pool=0x7f070009;
+        public static final int title_activity_login=0x7f07001a;
         public static final int title_activity_make_picks=0x7f070008;
         public static final int title_activity_picks=0x7f070007;
         public static final int title_activity_register=0x7f070003;
@@ -140,11 +159,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
 
+
     
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
 
         
 
@@ -167,8 +188,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int AppTheme=0x7f080001;
         public static final int ButtonBar=0x7f080003;
         public static final int ButtonBarButton=0x7f080007;
-        public static final int FullscreenActionBarStyle=0x7f080008;
+        public static final int FullscreenActionBarStyle=0x7f080009;
         public static final int FullscreenTheme=0x7f080002;
+        public static final int LoginFormContainer=0x7f080008;
         public static final int PSTab=0x7f080004;
         public static final int PSTabText=0x7f080005;
         public static final int Theme_Holo_ActionBarScrollable=0x7f080006;
