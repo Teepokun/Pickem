@@ -87,7 +87,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int picksFragmentTextView=0x7f0a001f;
         public static final int pluralsightDescription=0x7f0a000c;
         public static final int poolSpinner=0x7f0a0020;
-        public static final int pools_spinner=0x7f0a0029;
         public static final int register_button=0x7f0a0008;
         public static final int selectableGroup=0x7f0a0009;
         public static final int sign_in_button=0x7f0a0007;

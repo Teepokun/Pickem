@@ -1,12 +1,15 @@
 package com.example.pickem.data;
 
 public class SharedObjects {
-	public User currentUser;
+	public User user;
+	
+	
+	
 	protected static SharedObjects instance = null ;
 	
 	protected SharedObjects() {}
 	
-	public SharedObjects getInstance() {
+	public static SharedObjects getInstance() {
 		if(instance == null) {
 			instance = new SharedObjects();
 		}

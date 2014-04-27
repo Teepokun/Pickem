@@ -1,5 +1,7 @@
 package com.example.pickem;
 
+import com.example.pickem.data.SharedObjects;
+import com.example.pickem.data.User;
 import com.example.pickem.db.DBManager;
 import com.example.pickem.db.TaskCompletedListener;
 
@@ -46,6 +48,7 @@ public class LoginActivity extends Activity implements TaskCompletedListener {
 	// Values for email and password at the time of the login attempt.
 	private String mEmail;
 	private String mPassword;
+	private String mUser;
 
 	// UI references.
 	private EditText mEmailView;
@@ -216,6 +219,21 @@ public class LoginActivity extends Activity implements TaskCompletedListener {
 	public void onNotifyTaskCompleted(Object o) {
 		showProgress(false);
 		if( o.equals("Valid")) {
+			
+			
+			DBManager manager = new DBManager();
+			manager.getUser(mEmail, new TaskCompletedListener() {
+
+				@Override
+				public void onNotifyTaskCompleted(Object o) {
+					User u = (User) o;
+					
+					SharedObjects objects = SharedObjects.getInstance();
+					objects.user = u;
+				}
+				
+			});
+			
 			Intent i = new Intent(this, MainActivity.class);
 			startActivity(i);
 		}

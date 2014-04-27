@@ -4,6 +4,12 @@ import java.util.Vector;
 
 
 public class Commissioner extends User {
+	public Commissioner(String firstname, String lastname, String user,
+			String password, String email) {
+		super(firstname, lastname, user, password, email);
+		// TODO Auto-generated constructor stub
+	}
+
 	private Vector<Pool> commissionerPools;
 	
 	public Vector<Pool> commissionerPools() {

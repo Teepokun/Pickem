@@ -11,6 +11,7 @@ import org.json.JSONObject;
 
 import com.example.pickem.data.Game;
 import com.example.pickem.data.Team;
+import com.example.pickem.data.User;
 
 import android.util.Log;
 
@@ -154,6 +155,35 @@ public class DBManager implements TaskCompletedListener {
 				} catch (Exception e) {e.printStackTrace();}
 				
 				tListener.onNotifyTaskCompleted(result);
+			}
+	    	
+	    });
+	    task.execute();
+	}
+	
+	public void getUser(String email, TaskCompletedListener listener) {
+		final TaskCompletedListener tListener = listener;
+		if(email == null) { throw new NullPointerException("away was null");}
+		
+		List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);  
+	    nameValuePairs.add(new BasicNameValuePair("email", email )); 
+	    
+	    DBAsyncTask task = new DBAsyncTask("getUser.php", nameValuePairs, new TaskCompletedListener() {
+
+			@Override
+			public void onNotifyTaskCompleted(Object o) {
+				User user = null;
+				try {
+					JSONObject object = new JSONObject((String) o);
+					user = new User(object.getString("firstname"),
+									object.getString("lastname"),
+									object.getString("user"),
+									object.getString("password"),
+									object.getString("email"));
+					
+				} catch (Exception e) {e.printStackTrace();}
+				
+				tListener.onNotifyTaskCompleted(user);
 			}
 	    	
 	    });
