@@ -68,7 +68,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
     }
     
     
-    public void onPoolsClick(MenuItem menuItem) {
+    /*public void onPoolsClick(MenuItem menuItem) {
     	Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     	PoolsFragment fragment = new PoolsFragment();
@@ -78,9 +78,9 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
     	
     	ft.replace(android.R.id.content, fragment);
     	ft.commit();
-     }
+     }*/
 
-    public void onPicksClick(MenuItem menuItem) {
+    /*public void onPicksClick(MenuItem menuItem) {
     	Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     	PicksFragment fragment = new PicksFragment();
@@ -90,9 +90,9 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
     	
     	ft.replace(android.R.id.content, fragment);
     	ft.commit();
-     }
+     }*/
     
-    public void onUserStatsClick(MenuItem menuItem) {
+    /*public void onUserStatsClick(MenuItem menuItem) {
     	Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     	UserStatsFragment fragment = new UserStatsFragment();
@@ -102,7 +102,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
     	
     	ft.replace(android.R.id.content, fragment);
     	ft.commit();
-     }
+     }*/
   
     
     
@@ -117,6 +117,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
     	ft.replace(android.R.id.content, fragment);
     	ft.commit();
     }
+
     
     public void onHelpOptionClicked(MenuItem menuItem){
     	Intent intent = new Intent(this, MainActivity.class);
