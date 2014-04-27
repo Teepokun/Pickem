@@ -83,20 +83,59 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
     public void onJoinPoolClick(MenuItem menuItem) {
     	Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-    	CreatePoolFragment fragment = new CreatePoolFragment();
+    	JoinPoolFragment fragment = new JoinPoolFragment();
     	FragmentManager fm = getFragmentManager();
     	FragmentTransaction ft = fm.beginTransaction();
-    	ft.addToBackStack("CreatePool");
+    	ft.addToBackStack("JoinPool");
     	
     	ft.replace(android.R.id.content, fragment);
      }
 
+    public void onPicksClick(MenuItem menuItem) {
+    	Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    	PicksFragment fragment = new PicksFragment();
+    	FragmentManager fm = getFragmentManager();
+    	FragmentTransaction ft = fm.beginTransaction();
+    	ft.addToBackStack("Picks");
+    	
+    	ft.replace(android.R.id.content, fragment);
+     }
+    
+    public void onUserStatsClick(MenuItem menuItem) {
+    	Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    	UserStatsFragment fragment = new UserStatsFragment();
+    	FragmentManager fm = getFragmentManager();
+    	FragmentTransaction ft = fm.beginTransaction();
+    	ft.addToBackStack("Stats");
+    	
+    	ft.replace(android.R.id.content, fragment);
+     }
   
     
     
-    public void onAboutOptionClicked(MenuItem menuItem){}
+    public void onAboutOptionClicked(MenuItem menuItem){
+    	Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    	AboutUsFragment fragment = new AboutUsFragment();
+    	FragmentManager fm = getFragmentManager();
+    	FragmentTransaction ft = fm.beginTransaction();
+    	ft.addToBackStack("About");
+    	
+    	ft.replace(android.R.id.content, fragment);
+    }
     
-    public void onHelpOptionClicked(MenuItem menuItem){}
+    public void onHelpOptionClicked(MenuItem menuItem){
+    	Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    	HelpFragment fragment = new HelpFragment();
+    	FragmentManager fm = getFragmentManager();
+    	FragmentTransaction ft = fm.beginTransaction();
+    	ft.addToBackStack("Help");
+    	
+    	ft.replace(android.R.id.content, fragment);
+    }
     
     
     private void navigateToRegister() {}
