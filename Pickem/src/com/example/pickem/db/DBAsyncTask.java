@@ -14,7 +14,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import android.os.AsyncTask;
 
 public class DBAsyncTask extends AsyncTask<Void, Void, String> {
-	private static final String baseURL = "http://10.12.118.55/scripts/";
+	private static final String baseURL = "http://lamp.cse.fau.edu/~dlindem3/";
 	//private static final String baseURL = "http://192.168.1.9/scripts/"; 
 	private final List<NameValuePair> nameValuePairs;
 	private final String script;
@@ -32,7 +32,8 @@ public class DBAsyncTask extends AsyncTask<Void, Void, String> {
         try {
 		     //http post
 		     HttpClient httpclient = new DefaultHttpClient();
-		     HttpPost httppost = new HttpPost(baseURL + script);
+		     String url = baseURL + script;
+		     HttpPost httppost = new HttpPost(url);
 		     httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));  
 		     HttpResponse response = httpclient.execute(httppost);
 		     result = new BasicResponseHandler().handleResponse(response);
