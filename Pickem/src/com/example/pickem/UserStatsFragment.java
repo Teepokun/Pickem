@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 
 public class UserStatsFragment extends Fragment{
 	
+    /**
+     * Handles initial creation of fragment
+     */
 	 @Override
 	    public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
@@ -15,6 +18,9 @@ public class UserStatsFragment extends Fragment{
 	        //setHasOptionsMenu(true);
 	    }
 	
+	/**
+	* creates and returns the views associated with this fragment
+	*/
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.stats_fragment, container, false);

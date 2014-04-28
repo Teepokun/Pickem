@@ -109,7 +109,7 @@
         android:layout_alignBottom="@+id/RegisterActivity_Submit_Button"
         android:layout_marginLeft="45dp"
         android:layout_toRightOf="@+id/RegisterActivity_Submit_Button"
-        android:text="@string/RegisterActivity_Cancel" />
+        android:text="@string/cancel_button" />
 
     <Button
         android:id="@+id/RegisterActivity_Submit_Button"

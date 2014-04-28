@@ -23,17 +23,23 @@
     <string name="RegisterActivity_PasswordConf">Confirm Password</string>
     <string name="RegisterActivity_Email">Email Address</string>
     <string name="RegisterActivity_Submit">Submit</string>
-    <string name="RegisterActivity_Cancel">Cancel</string>
+    <string name="cancel_button">Cancel</string>
     <string name="title_activity_tab">TabActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_pools">PoolsActivity</string>
     <string name="title_pools_spinner">Spinner</string>
+    <string name="submit_picks_button">Submit Picks</string>
      <string-array name="color_array">  
      <item>Yellow</item>   
      <item>Pink</item>    
      <item>Purple</item>  
      <item>Red</item>       
-   </string-array>  
+   </string-array> 
+        <string-array name="conferences">  
+     <item>All</item>   
+     <item>ACC</item>    
+     <item>SEC</item>  
+   </string-array>   
 
 </resources>
