@@ -1,12 +1,17 @@
 package com.example.pickem;
 
+import android.app.DialogFragment;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class CreatePoolFragment extends Fragment{
+public class CreatePoolFragment extends DialogFragment{
+	
+	public CreatePoolFragment(){
+		
+	}
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

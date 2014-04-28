@@ -20,13 +20,40 @@ public class PoolsFragment extends Fragment {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setHasOptionsMenu(true);
+		
+		
 	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		return inflater.inflate(R.layout.pools_fragment, container, false);
 
+        
+		View view = inflater.inflate(R.layout.pools_fragment, container, false);
+		
+
+		Button joinButton = (Button)view.findViewById(R.id.join_pool_button);
+		
+		Button createButton = (Button) view.findViewById(R.id.create_pool_button);
+
+
+		joinButton.setOnClickListener(new OnClickListener() {
+            	public void onClick(final View v) {
+            		FragmentManager fm = getFragmentManager();
+                    JoinPoolFragment jp = new JoinPoolFragment();
+                    jp.show(fm, "join_pool_fragment");
+                
+            }
+        });
+		
+		createButton.setOnClickListener(new OnClickListener() {
+        	public void onClick(final View v) {
+        		FragmentManager fm = getFragmentManager();
+                CreatePoolFragment cp = new CreatePoolFragment();
+                cp.show(fm, "create_pool_fragment");
+       }
+    });
+		return view;
 	}
 	
 	@Override
@@ -40,7 +67,7 @@ public class PoolsFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
                             
-            view.findViewById(R.id.join_pool_button).setOnClickListener(new OnClickListener() {                       
+            /*view.findViewById(R.id.join_pool_button).setOnClickListener(new OnClickListener() {                       
                     @Override
                     public void onClick(View v) {
                     	Intent intent = new Intent(v.getContext(), MainActivity.class);
@@ -53,7 +80,7 @@ public class PoolsFragment extends Fragment {
                     	ft.replace(android.R.id.content, fragment);
                     	ft.commit();
                     }
-            });
+            });*/
 	}
 
 
