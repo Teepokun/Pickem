@@ -66,5 +66,33 @@
      <item>ACC</item>    
      <item>SEC</item>  
    </string-array>   
+   
+            <!-- Strings related to picks fragment-->
+    <string name="team_clemson">Clemson</string>
+    <string name="team_bosCol">Boston College</string>
+    <string name="team_fsu">Florida State</string>
+    <string name="team_ufl">Florida</string>
+    <string name="team_dukeU">Duke</string>
+    <string name="team_gaTech">Georgia Tech</string>
+    <string name="team_miami">Miami</string>
+    <string name="team_unc">North Carolina</string>
+    <string name="team_ncState">North Carolina State</string>
+    <string name="team_virginia">Virginia</string>
+    <string name="team_vaTech">Virginia Tech</string>
+    <string name="team_wakeForest">Wake Forest</string>
+    <string name="team_georgia">Georgia</string>
+    <string name="team_kentucky">Kentucky</string>
+    <string name="team_missouri">Missouri</string>
+ 	<string name="team_southCar">South Carolina</string>
+ 	<string name="team_tennessee">Tennessee</string>
+ 	<string name="team_vanderbilt">Vanderbilt</string>
+ 	<string name="team_alabama">Alabama</string>
+ 	<string name="team_auburn">Auburn</string>
+    <string name="team_laState">Louisiana State</string>
+    <string name="team_oleMiss">Mississippi</string>
+    <string name="team_msstate">Mississippi State</string>
+    <string name="team_texasAM">Texas A+M</string>
+    <string name="team_arkansas">Arkansas</string>
+    <string name="team_maryland">Maryland</string>
 
 </resources>
