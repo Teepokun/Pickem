@@ -1,20 +1,12 @@
 package com.example.pickem;
 
-import com.example.pickem.adapaters.StandingAdapter;
-import com.example.pickem.data.SharedObjects;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
-import android.widget.Button;
-import android.widget.TextView;
 
 public class PicksActivity extends Activity {
 
-	private TextView name;
-	private StandingAdapter standings;
-	private Button makePicksButton;
-	private SharedObjects shared;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -28,10 +20,5 @@ public class PicksActivity extends Activity {
 		return true;
 	}
 	
-	private void navigateToMakePicks() {}
-	
-	private void onClick() {}
-	
-	private void getStandingsFromDB() {}
 
 }

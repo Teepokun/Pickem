@@ -3,14 +3,10 @@ package com.example.pickem.adapaters;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.RadioButton;
-import android.widget.TextView;
+
 
 public class PicksAdapter extends BaseAdapter {
 
-	private RadioButton home;
-	private RadioButton away;
-	private TextView odds;
 	
 	@Override
 	public int getCount() {

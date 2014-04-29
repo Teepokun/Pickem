@@ -15,7 +15,7 @@ else {
 	$conference="null";
 }
 
-$con=mysqli_connect("127.0.0.1","root","T@R63dis","pickem");
+$con=mysqli_connect("127.0.0.1","dlindem3","T@R63dis","dlindem3");
 
 // Check connection
 if (mysqli_connect_errno()) {
@@ -27,10 +27,10 @@ if($name == "any") {
 }
 else {
 	if($conference == "null") {
-		$query = "Select * from team where name = '" . $name . "'";
+		$query = "Select * from team where Name = '" . $name . "'";
 	}
 	else {
-		$query = "Select * from team where name = '" . $name . "' and conference = '" . $conference . "'";
+		$query = "Select * from team where Name = '" . $name . "' and Conference = '" . $conference . "'";
 	}
 }
 

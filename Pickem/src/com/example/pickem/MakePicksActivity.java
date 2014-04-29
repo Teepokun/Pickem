@@ -1,15 +1,8 @@
 package com.example.pickem;
 
-import java.util.Vector;
-
-import com.example.pickem.adapaters.PicksAdapter;
-import com.example.pickem.data.Pick;
-import com.example.pickem.data.SharedObjects;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
-import android.widget.Button;
 
 public class MakePicksActivity extends Activity {
 

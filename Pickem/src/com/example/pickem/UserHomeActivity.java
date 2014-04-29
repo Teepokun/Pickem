@@ -1,19 +1,10 @@
 package com.example.pickem;
 
-import com.example.pickem.adapaters.PoolAdapter;
-import com.example.pickem.data.SharedObjects;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
-import android.view.View;
-import android.widget.Button;
-
 public class UserHomeActivity extends Activity {
-	private PoolAdapter poolListAdapter;
-	private SharedObjects shared;
-	private Button joinButton;
-	private Button createButton;
+
 	
 	
 	@Override
@@ -29,14 +20,4 @@ public class UserHomeActivity extends Activity {
 		return true;
 	}
 	
-	private void navigateToViewPool() {}
-	
-	private void navigateToCreatePool() {}
-	
-	private void navigateToJoinPool() {}
-	
-	private void onClick(View v) {}
-	
-	
-
 }
