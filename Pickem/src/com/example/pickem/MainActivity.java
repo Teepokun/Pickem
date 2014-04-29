@@ -126,11 +126,11 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
     @Override
 	public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft){
     	if(helpFragment.isAdded()){
-    		ft.detach(helpFragment);
+    		ft.hide(helpFragment);
     	}
     	
     	if(aboutFragment.isAdded()){
-    		ft.detach(aboutFragment);
+    		ft.hide(aboutFragment);
     	}
     	
 		CharSequence displayName = tab.getText();
