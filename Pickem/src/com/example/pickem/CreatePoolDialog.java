@@ -1,8 +1,7 @@
 package com.example.pickem;
 
 import android.app.DialogFragment;
-import android.app.Fragment;
-import android.app.FragmentManager;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,14 +9,8 @@ import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.CheckBox;
-
-
-import android.widget.RelativeLayout;
 import android.widget.Toast;
-
-import com.example.pickem.*;
 import com.example.pickem.data.SharedObjects;
 import com.example.pickem.db.DBManager;
 import com.example.pickem.db.TaskCompletedListener;
@@ -100,7 +93,7 @@ public class CreatePoolDialog extends DialogFragment{
 		}
 		
 		CheckBox accBox = (CheckBox) v.findViewById(R.id.accCheckbox);
-		CheckBox secBox = (CheckBox) v.findViewById(R.id.secCheckbox);
+		//CheckBox secBox = (CheckBox) v.findViewById(R.id.secCheckbox);
 		final String conference;
 		if(accBox.isChecked()) {
 			conference = "ACC";
@@ -122,7 +115,7 @@ public class CreatePoolDialog extends DialogFragment{
 				}
 				else {
 					DBManager manager = new DBManager();
-					manager.addToPoolUsers();
+					//manager.addToPoolUsers(); //handled by trigger
 					manager.createPool(name, conference, objects.user.getUser(), pass, "blah", new TaskCompletedListener() {
 
 						@Override
