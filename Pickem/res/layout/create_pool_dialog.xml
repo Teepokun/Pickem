@@ -2,28 +2,41 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="@drawable/repeating_image"
+    android:paddingLeft="16dp"
+	android:paddingRight="16dp">
+
+    	<Space
+		        android:layout_width="wrap_content"
+        		android:layout_height="40dp" />
     
         <TextView
             android:id="@+id/create_pool_name_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pool_name" />
+            android:text="@string/pool_name" 
+            style="@style/LabelText"/>
 
         <EditText
             android:id="@+id/create_pool_name_entry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="text" />
+            android:inputType="text" 
+            android:background="@drawable/custom_edittext" />
 
                 	
+        <Space
+		        android:layout_width="wrap_content"
+        		android:layout_height="40dp" />
         
 		<CheckBox
 	        android:id="@+id/privacyCheckbox"
     	    android:layout_width="wrap_content"
         	android:layout_height="wrap_content"
-        	android:text="@string/privatePool_check" />
+        	android:text="@string/privatePool_check" 
+        	style="@style/LabelText"/>
 		
 		<EditText
         android:id="@+id/createPool_password"
@@ -31,7 +44,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword" 
-        android:visibility="invisible">
+        android:visibility="invisible"
+        android:background="@drawable/custom_edittext" >
         
 
         <requestFocus />
@@ -43,31 +57,53 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10" 
-            android:text="@string/conferenceChoice_prompt" />
+            android:text="@string/conferenceChoice_prompt" 
+            style="@style/LabelText"/>
         
         <CheckBox
 	        android:id="@+id/accCheckbox"
     	    android:layout_width="wrap_content"
         	android:layout_height="wrap_content"
-        	android:text="@string/ACC" />
+        	android:text="@string/ACC" 
+        	style="@style/LabelText"/>
 		
         <CheckBox
 	        android:id="@+id/secCheckbox"
     	    android:layout_width="wrap_content"
         	android:layout_height="wrap_content"
-        	android:text="@string/SEC" />
+        	android:text="@string/SEC" 
+        	style="@style/LabelText"/>
 
-        <Button
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:gravity="center">
+     
+         <Button
             android:id="@+id/createPool_submit_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/createPool_button" />
+            android:text="@string/createPool_button" 
+            android:background="@drawable/custom_button"  
+			android:textColor="@color/green_accent" 
+			android:paddingLeft="10dp"
+			    android:paddingRight="10dp"/>
 
         <Button
             android:id="@+id/createPool_cancel_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cancel_button" />
+            android:layout_alignBaseline="@+id/createPool_submit_btn"
+            android:layout_alignBottom="@+id/createPool_submit_btn"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/createPool_submit_btn"
+            android:background="@drawable/custom_button"
+            android:text="@string/cancel_button"
+            android:textColor="@color/green_accent" 
+            android:paddingLeft="25dp"
+			android:paddingRight="25dp"/>
+
+		</RelativeLayout>
 
     </LinearLayout>
 

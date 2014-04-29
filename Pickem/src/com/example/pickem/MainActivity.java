@@ -9,6 +9,8 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -41,8 +43,6 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
         CreateTab(actionBar, tab3Name);
         CreateTab(actionBar, tab4Name);
         setContentView(R.layout.activity_main);
-        
-        
         
     }
     

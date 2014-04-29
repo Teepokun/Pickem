@@ -32,6 +32,7 @@ public class CreatePoolDialog extends DialogFragment{
 			Bundle savedInstanceState) {
 		
 		View view = inflater.inflate(R.layout.create_pool_dialog, container, false);
+		getDialog().setTitle("Create a Pool");
 		
 		CheckBox accBox = (CheckBox) view.findViewById(R.id.accCheckbox);
 		CheckBox secBox = (CheckBox) view.findViewById(R.id.secCheckbox);

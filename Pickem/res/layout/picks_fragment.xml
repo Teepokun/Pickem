@@ -1,633 +1,500 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/scrollView1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1" >
-
-<LinearLayout 
+    android:id="@+id/scrollView1"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="right"
-    android:orientation="vertical" >
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@drawable/repeating_image" >
 
-    
-       
-    
-
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|fill_horizontal"
-        android:layout_weight="0.53"
-        android:orientation="horizontal" >
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
 
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_weight="7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
 
-        <TableRow
-            android:id="@+id/gameRow1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:layout_gravity="center_horizontal|fill_horizontal" >
-            
-             <RadioGroup
-                android:id="@+id/radioGroup1"
-                android:layout_width="match_parent"
+            <RadioButton
+                android:id="@+id/radioBtnAway1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="fill_horizontal"
-                android:layout_weight="7"
-                android:orientation="horizontal" >
-                             
-                <RadioButton
-                    android:id="@+id/radioBtnAway1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="1"
-                    android:checked="true" />
-                
-                <TextView
-                    android:id="@+id/textAway1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="4"
-                    android:text="@string/team_laState" />
-                
-                       <TextView
-                           android:id="@+id/textHome1"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:layout_gravity="right"
-                           android:layout_weight="1"
-                           android:text="@string/team_arkansas" />
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:gravity="left" />
 
-                <RadioButton
-                    android:id="@+id/radioBtnHome1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right" 
-                    android:layout_weight="0"/>
-                
-            </RadioGroup>
-            
-        </TableRow>
-
-                <TableRow
-            android:id="@+id/gameRow2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:layout_gravity="center_horizontal|fill_horizontal" >
-            
-        </TableRow>
-                        <TableRow
-            android:id="@+id/gameRow3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:layout_gravity="center_horizontal|fill_horizontal" >
-            
-             <RadioGroup
-                android:id="@+id/radioGroup3"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textAway1"
+                style="@style/AwayPicksText"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="fill_horizontal"
-                android:layout_weight="7"
-                android:orientation="horizontal" >
-                             
-                <RadioButton
-                    android:id="@+id/radioBtnAway3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="1"
-                    android:checked="true" />
-                
-                <TextView
-                    android:id="@+id/textAway3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="4"
-                    android:text="@string/team_southCar" />
-                
-                       <TextView
-                           android:id="@+id/textHome3"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:layout_gravity="right"
-                           android:layout_weight="1"
-                           android:text="@string/team_clemson" />
+                android:layout_weight="4"
+                android:text="@string/team_laState" />
 
-                <RadioButton
-                    android:id="@+id/radioBtnHome3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right" 
-                    android:layout_weight="0"/>
-                
-            </RadioGroup>
-            
-        </TableRow>
-                        <TableRow
-            android:id="@+id/gameRow4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:layout_gravity="center_horizontal|fill_horizontal" >
-            
-             <RadioGroup
-                android:id="@+id/radioGroup4"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textHome1"
+                style="@style/HomePicksText"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="fill_horizontal"
-                android:layout_weight="7"
-                android:orientation="horizontal" >
-                             
-                <RadioButton
-                    android:id="@+id/radioBtnAway4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="1"
-                    android:checked="true" />
-                
-                <TextView
-                    android:id="@+id/textAway4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="4"
-                    android:text="@string/team_ufl" />
-                
-                       <TextView
-                           android:id="@+id/textHome4"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:layout_gravity="right"
-                           android:layout_weight="1"
-                           android:text="@string/team_fsu" />
+                android:layout_weight="1"
+                android:text="@string/team_arkansas" />
 
-                <RadioButton
-                    android:id="@+id/radioBtnHome4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right" 
-                    android:layout_weight="0"/>
-                
-            </RadioGroup>
-            
-        </TableRow>
-                        <TableRow
-            android:id="@+id/gameRow5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:layout_gravity="center_horizontal|fill_horizontal" >
-            
-             <RadioGroup
-                android:id="@+id/radioGroup5"
-                android:layout_width="match_parent"
+            <RadioButton
+                android:id="@+id/radioBtnHome1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="fill_horizontal"
-                android:layout_weight="7"
-                android:orientation="horizontal" >
-                             
-                <RadioButton
-                    android:id="@+id/radioBtnAway5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="1"
-                    android:checked="true" />
-                
-                <TextView
-                    android:id="@+id/textAway5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="4"
-                    android:text="@string/team_maryland" />
-                
-                       <TextView
-                           android:id="@+id/textHome5"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:layout_gravity="right"
-                           android:layout_weight="1"
-                           android:text="@string/team_unc" />
+                android:layout_gravity="right"
+                android:layout_weight="0" />
+        </RadioGroup>
 
-                <RadioButton
-                    android:id="@+id/radioBtnHome5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right" 
-                    android:layout_weight="0"/>
-                
-            </RadioGroup>
-            
-        </TableRow>
-        
-                                        <TableRow
-            android:id="@+id/gameRow6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:layout_gravity="center_horizontal|fill_horizontal" >
-            
-             <RadioGroup
-                android:id="@+id/radioGroup6"
-                android:layout_width="match_parent"
+        <RadioGroup
+            android:id="@+id/radioGroup3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioBtnAway3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="fill_horizontal"
-                android:layout_weight="7"
-                android:orientation="horizontal" >
-                             
-                <RadioButton
-                    android:id="@+id/radioBtnAway6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="1"
-                    android:checked="true" />
-                
-                <TextView
-                    android:id="@+id/textAway6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="4"
-                    android:text="@string/team_vanderbilt" />
-                
-                       <TextView
-                           android:id="@+id/textHome6"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:layout_gravity="right"
-                           android:layout_weight="1"
-                           android:text="@string/team_wakeForest" />
+                android:layout_gravity="left"
+                android:layout_weight="1" />
 
-                <RadioButton
-                    android:id="@+id/radioBtnHome6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right" 
-                    android:layout_weight="0"/>
-                
-            </RadioGroup>
-            
-        </TableRow>
-        
-                                                        <TableRow
-            android:id="@+id/gameRow7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:layout_gravity="center_horizontal|fill_horizontal" >
-            
-             <RadioGroup
-                android:id="@+id/radioGroup7"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textAway3"
+                style="@style/AwayPicksText"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="fill_horizontal"
-                android:layout_weight="7"
-                android:orientation="horizontal" >
-                             
-                <RadioButton
-                    android:id="@+id/radioBtnAway7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="1"
-                    android:checked="true" />
-                
-                <TextView
-                    android:id="@+id/textAway7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="4"
-                    android:text="@string/team_miami" />
-                
-                       <TextView
-                           android:id="@+id/textHome7"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:layout_gravity="right"
-                           android:layout_weight="1"
-                           android:text="@string/team_dukeU" />
+                android:layout_weight="4"
+                android:text="@string/team_southCar" />
 
-                <RadioButton
-                    android:id="@+id/radioBtnHome7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right" 
-                    android:layout_weight="0"/>
-                
-            </RadioGroup>
-            
-        </TableRow>
-                        <TableRow
-            android:id="@+id/gameRow8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:layout_gravity="center_horizontal|fill_horizontal" >
-            
-             <RadioGroup
-                android:id="@+id/radioGroup8"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textHome3"
+                style="@style/HomePicksText"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="fill_horizontal"
-                android:layout_weight="7"
-                android:orientation="horizontal" >
-                             
-                <RadioButton
-                    android:id="@+id/radioBtnAway8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="1"
-                    android:checked="true" />
-                
-                <TextView
-                    android:id="@+id/textAway8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="4"
-                    android:text="@string/team_gaTech" />
-                
-                       <TextView
-                           android:id="@+id/textHome8"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:layout_gravity="right"
-                           android:layout_weight="1"
-                           android:text="@string/team_georgia" />
+                android:layout_weight="1"
+                android:text="@string/team_clemson" />
 
-                <RadioButton
-                    android:id="@+id/radioBtnHome8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right" 
-                    android:layout_weight="0"/>
-                
-            </RadioGroup>
-            
-        </TableRow>
-                                <TableRow
-            android:id="@+id/gameRow9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:layout_gravity="center_horizontal|fill_horizontal" >
-            
-             <RadioGroup
-                android:id="@+id/radioGroup9"
-                android:layout_width="match_parent"
+            <RadioButton
+                android:id="@+id/radioBtnHome3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="fill_horizontal"
-                android:layout_weight="7"
-                android:orientation="horizontal" >
-                             
-                <RadioButton
-                    android:id="@+id/radioBtnAway9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="1"
-                    android:checked="true" />
-                
-                <TextView
-                    android:id="@+id/textAway9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="4"
-                    android:text="@string/team_virginia" />
-                
-                       <TextView
-                           android:id="@+id/textHome9"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:layout_gravity="right"
-                           android:layout_weight="1"
-                           android:text="@string/team_vaTech" />
+                android:layout_gravity="right"
+                android:layout_weight="0" />
+        </RadioGroup>
 
-                <RadioButton
-                    android:id="@+id/radioBtnHome9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right" 
-                    android:layout_weight="0"/>
-                
-            </RadioGroup>
-            
-        </TableRow>
-                                <TableRow
-            android:id="@+id/gameRow10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:layout_gravity="center_horizontal|fill_horizontal" >
-            
-             <RadioGroup
-                android:id="@+id/radioGroup10"
-                android:layout_width="match_parent"
+        <RadioGroup
+            android:id="@+id/radioGroup4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioBtnAway4"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="fill_horizontal"
-                android:layout_weight="7"
-                android:orientation="horizontal" >
-                             
-                <RadioButton
-                    android:id="@+id/radioBtnAway10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="1"
-                    android:checked="true" />
-                
-                <TextView
-                    android:id="@+id/textAway10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="4"
-                    android:text="@string/team_kentucky" />
-                
-                       <TextView
-                           android:id="@+id/textHome10"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:layout_gravity="right"
-                           android:layout_weight="1"
-                           android:text="@string/team_tennessee" />
+                android:layout_gravity="left"
+                android:layout_weight="1" />
 
-                <RadioButton
-                    android:id="@+id/radioBtnHome10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right" 
-                    android:layout_weight="0"/>
-                
-            </RadioGroup>
-            
-        </TableRow>
-                                <TableRow
-            android:id="@+id/gameRow11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:layout_gravity="center_horizontal|fill_horizontal" >
-            
-             <RadioGroup
-                android:id="@+id/radioGroup11"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textAway4"
+                style="@style/AwayPicksText"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="fill_horizontal"
-                android:layout_weight="7"
-                android:orientation="horizontal" >
-                             
-                <RadioButton
-                    android:id="@+id/radioBtnAway11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="1"
-                    android:checked="true" />
-                
-                <TextView
-                    android:id="@+id/textAway11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="4"
-                    android:text="@string/team_missouri" />
-                
-                       <TextView
-                           android:id="@+id/textHome11"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:layout_gravity="right"
-                           android:layout_weight="1"
-                           android:text="@string/team_texasAM" />
+                android:layout_weight="4"
+                android:text="@string/team_ufl" />
 
-                <RadioButton
-                    android:id="@+id/radioBtnHome11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right" 
-                    android:layout_weight="0"/>
-                
-            </RadioGroup>
-            
-        </TableRow>
-        
-                                                        <TableRow
-            android:id="@+id/gameRow12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:layout_gravity="center_horizontal|fill_horizontal" >
-            
-             <RadioGroup
-                android:id="@+id/radioGroup12"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textHome4"
+                style="@style/AwayPicksText"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="fill_horizontal"
-                android:layout_weight="7"
-                android:orientation="horizontal" >
-                             
-                <RadioButton
-                    android:id="@+id/radioBtnAway12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="1"
-                    android:checked="true" />
-                
-                <TextView
-                    android:id="@+id/textAway12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="4"
-                    android:text="@string/team_auburn" />
-                
-                       <TextView
-                           android:id="@+id/textHome12"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:layout_gravity="right"
-                           android:layout_weight="1"
-                           android:text="@string/team_alabama" />
+                android:layout_weight="1"
+                android:text="@string/team_fsu" />
 
-                <RadioButton
-                    android:id="@+id/radioBtnHome12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right" 
-                    android:layout_weight="0"/>
-                
-            </RadioGroup>
-            
-        </TableRow>
-        
-                                                                                <TableRow
-            android:id="@+id/gameRow13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:layout_gravity="center_horizontal|fill_horizontal" >
-            
-             <RadioGroup
-                android:id="@+id/radioGroup13"
-                android:layout_width="match_parent"
+            <RadioButton
+                android:id="@+id/radioBtnHome4"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="fill_horizontal"
-                android:layout_weight="7"
-                android:orientation="horizontal" >
-                             
-                <RadioButton
-                    android:id="@+id/radioBtnAway13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="1"
-                    android:checked="true" />
-                
-                <TextView
-                    android:id="@+id/textAway13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="4"
-                    android:text="@string/team_msstate" />
-                
-                       <TextView
-                           android:id="@+id/textHome13"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:layout_gravity="right"
-                           android:layout_weight="1"
-                           android:text="@string/team_oleMiss" />
+                android:layout_gravity="right"
+                android:layout_weight="0" />
+        </RadioGroup>
 
-                <RadioButton
-                    android:id="@+id/radioBtnHome13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right" 
-                    android:layout_weight="0"/>
-                
-            </RadioGroup>
-            
-             
-            
-        </TableRow>
-    </TableLayout>
+        <RadioGroup
+            android:id="@+id/radioGroup5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
 
-    <Button
-        android:id="@+id/submit_picks_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:text="@string/submit_picks_button" />
+            <RadioButton
+                android:id="@+id/radioBtnAway5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1" />
 
-    <Button
-        android:id="@+id/cancel_picks_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:text="@string/cancel_button" />
+            <TextView
+                android:id="@+id/textAway5"
+                style="@style/AwayPicksText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/team_maryland" />
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/textHome5"
+                style="@style/HomePicksText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/team_unc" />
+
+            <RadioButton
+                android:id="@+id/radioBtnHome5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioGroup6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioBtnAway6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/textAway6"
+                style="@style/AwayPicksText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/team_vanderbilt" />
+
+            <TextView
+                android:id="@+id/textHome6"
+                style="@style/HomePicksText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/team_wakeForest" />
+
+            <RadioButton
+                android:id="@+id/radioBtnHome6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioGroup7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioBtnAway7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/textAway7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/AwayPicksText"
+                android:layout_weight="4"
+                android:text="@string/team_miami" />
+
+            <TextView
+                android:id="@+id/textHome7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HomePicksText"
+                android:layout_weight="1"
+                android:text="@string/team_dukeU" />
+
+            <RadioButton
+                android:id="@+id/radioBtnHome7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioGroup8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioBtnAway8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/textAway8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/AwayPicksText"
+                android:layout_weight="4"
+                android:text="@string/team_gaTech" />
+
+            <TextView
+                android:id="@+id/textHome8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HomePicksText"
+                android:layout_weight="1"
+                android:text="@string/team_georgia" />
+
+            <RadioButton
+                android:id="@+id/radioBtnHome8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioGroup9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioBtnAway9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/textAway9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/AwayPicksText"
+                android:layout_weight="4"
+                android:text="@string/team_virginia" />
+
+            <TextView
+                android:id="@+id/textHome9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HomePicksText"
+                android:layout_weight="1"
+                android:text="@string/team_vaTech" />
+
+            <RadioButton
+                android:id="@+id/radioBtnHome9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioGroup10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioBtnAway10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/textAway10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/AwayPicksText"
+                android:layout_weight="4"
+                android:text="@string/team_kentucky" />
+
+            <TextView
+                android:id="@+id/textHome10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HomePicksText"
+                android:layout_weight="1"
+                android:text="@string/team_tennessee" />
+
+            <RadioButton
+                android:id="@+id/radioBtnHome10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioGroup11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioBtnAway11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/textAway11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/AwayPicksText"
+                android:layout_weight="4"
+                android:text="@string/team_missouri" />
+
+            <TextView
+                android:id="@+id/textHome11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+				style="@style/HomePicksText"
+                android:layout_weight="1"
+                android:text="@string/team_texasAM" />
+
+            <RadioButton
+                android:id="@+id/radioBtnHome11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioGroup12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioBtnAway12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/textAway12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/AwayPicksText"
+                android:layout_weight="4"
+                android:text="@string/team_auburn" />
+
+            <TextView
+                android:id="@+id/textHome12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/HomePicksText"
+                android:text="@string/team_alabama" />
+
+            <RadioButton
+                android:id="@+id/radioBtnHome12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioGroup13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioBtnAway13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/textAway13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+				style="@style/AwayPicksText"                
+				android:layout_weight="4"
+                android:text="@string/team_msstate" />
+
+            <TextView
+                android:id="@+id/textHome13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HomePicksText"
+                android:layout_weight="1"
+                android:text="@string/team_oleMiss" />
+
+            <RadioButton
+                android:id="@+id/radioBtnHome13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="0" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/submit_picks_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/submit_picks_button" />
+
+        <Button
+            android:id="@+id/cancel_picks_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cancel_button" />
+    </LinearLayout>
+
 </ScrollView>

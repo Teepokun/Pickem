@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="@drawable/repeating_image">
 
     <Space
         android:layout_width="match_parent"
@@ -26,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="PICK 'EM POOL"
+        android:textColor="@color/green_accent"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -33,7 +35,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="version 1.0" />
+        android:text="version 1.0" 
+    	android:textColor="@color/green_accent"/>
 
     <Space
         android:layout_width="match_parent"
@@ -46,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
         android:text="Created by Landemann Inc."
+        android:textColor="@color/green_accent"
         android:textAppearance="?android:attr/textAppearanceMedium" />
     
 </LinearLayout>

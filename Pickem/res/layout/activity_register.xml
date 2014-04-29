@@ -6,7 +6,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".RegisterActivity" >
+    android:background="@drawable/repeating_image"
+    tools:context=".RegisterActivity">
+
 
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -16,16 +18,23 @@
         android:layout_alignParentRight="true"
         android:orientation="vertical" >
 
+            <Space
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+        
         <TextView
             android:id="@+id/RegistrationActivity_FirstNameLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/RegisterActivity_FirstName" />
+            android:text="@string/RegisterActivity_FirstName" 
+            style="@style/LabelText"
+             /> 
 
         <EditText
             android:id="@+id/RegistrationActivity_FirstName_Entry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/custom_edittext" 
             android:ems="10"
             android:inputType="text" />
 
@@ -34,12 +43,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="@string/RegisterActivity_LastName" />
-
+            android:text="@string/RegisterActivity_LastName" 
+            style="@style/LabelText"/>
+ 
         <EditText
             android:id="@+id/RegistrationActivity_LastName_Entry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/custom_edittext" 
             android:ems="10" 
             android:inputType="text" />
   
@@ -48,12 +59,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="@string/RegisterActivity_Username" />
+            android:text="@string/RegisterActivity_Username" 
+            style="@style/LabelText"/>
 
         <EditText
             android:id="@+id/RegistrationActivity_Username_Entry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/custom_edittext" 
             android:ems="10" 
             android:inputType="text"/>
 
@@ -62,26 +75,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="@string/RegisterActivity_Password" />
+            android:text="@string/RegisterActivity_Password" 
+            style="@style/LabelText"/>
 
         <EditText
             android:id="@+id/RegistrationActivity_Password_Entry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/custom_edittext" 
             android:ems="10"
             android:inputType="textPassword" />
+            
 
         <TextView
             android:id="@+id/RegistrationActivity_ConfirmPasswordLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="@string/RegisterActivity_PasswordConf" />
+            android:text="@string/RegisterActivity_PasswordConf" 
+            style="@style/LabelText"/>
 
         <EditText
             android:id="@+id/RegistrationActivity_ConfirmPassword_Entry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/custom_edittext" 
             android:ems="10"
             android:inputType="textPassword" />
         
@@ -90,35 +108,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="@string/RegisterActivity_Email" />
-
+            android:text="@string/RegisterActivity_Email" 
+            style="@style/LabelText"/>
+  
         <EditText
             android:id="@+id/RegistrationActivity_Email_Entry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/custom_edittext" 
             android:ems="10"
             android:inputType="textEmailAddress" />
 
+        
     </LinearLayout>
 
     <Button
         android:id="@+id/RegisterActivity_Cancel_Button"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
         android:layout_alignBaseline="@+id/RegisterActivity_Submit_Button"
         android:layout_alignBottom="@+id/RegisterActivity_Submit_Button"
         android:layout_marginLeft="45dp"
         android:layout_toRightOf="@+id/RegisterActivity_Submit_Button"
-        android:text="@string/cancel_button" />
+        android:text="@string/cancel_button"/>
 
     <Button
         android:id="@+id/RegisterActivity_Submit_Button"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"  
         android:layout_alignLeft="@+id/linearLayout1"
         android:layout_below="@+id/linearLayout1"
         android:layout_marginLeft="176dp"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="42dp" 
         android:text="@string/RegisterActivity_Submit" />
+
+
 
 </RelativeLayout>

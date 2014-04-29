@@ -1,5 +1,7 @@
 <resources>
 
     <color name="black_overlay">#66000000</color>
+    <color name="edittext_fill">#ededed</color>
+    <color name="green_accent">#245104</color>
 
 </resources>

@@ -23,7 +23,7 @@
     <string name="RegisterActivity_PasswordConf">Confirm Password</string>
     <string name="RegisterActivity_Email">Email Address</string>
     <string name="RegisterActivity_Submit">Submit</string>
-    <string name="cancel_button">Cancel</string>
+    <string name="cancel_button">  Cancel  </string>
     <string name="title_activity_tab">TabActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
