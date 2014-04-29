@@ -194,6 +194,35 @@ public class DBManager implements TaskCompletedListener {
 		this.listener = listener;
 	}
 	
+	public void doesPoolExist(String name, TaskCompletedListener listener) {
+		if(name == null) { throw new NullPointerException("name was null");}
+		final TaskCompletedListener tListener = listener; 
+		List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(1);  
+	    nameValuePairs.add(new BasicNameValuePair("name", name )); 
+	    DBAsyncTask task = new DBAsyncTask("doesPoolExist.php", nameValuePairs, new TaskCompletedListener() {
+
+			@Override
+			public void onNotifyTaskCompleted(Object o) {
+				
+				String count = null; 
+				
+				try {
+			
+					JSONObject object = new JSONObject((String) o);
+						count = object.getString("num");
+					
+				} catch (Exception e) {e.printStackTrace();}
+				boolean exists = false;
+				if(count != null && count.equals("1")) {
+					exists = true;
+				}
+				tListener.onNotifyTaskCompleted(Boolean.valueOf(exists));
+			}
+	    	
+	    });
+	    task.execute();
+	}
+	
 	public void getAllUserPools(String user, TaskCompletedListener listener) {
 		if(user == null) { throw new NullPointerException("user was null");}
 		final TaskCompletedListener tListener = listener; 
@@ -223,7 +252,26 @@ public class DBManager implements TaskCompletedListener {
 	    task.execute();
 	}
 	
-	
+	public void createPool(String name, String conference, String commissioner, String password, String deadline, TaskCompletedListener listener) {
+		if(name == null) { throw new NullPointerException("name was null");}
+		if(conference == null) { throw new NullPointerException("conference was null");}
+
+		if(password == null) {password = "";}
+		
+		if(deadline == null) { throw new NullPointerException("deadline was null");}
+		
+		final TaskCompletedListener tListener = listener; 
+		List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(1);  
+	    nameValuePairs.add(new BasicNameValuePair("name", name )); 
+	    nameValuePairs.add(new BasicNameValuePair("conference", conference )); 
+	    nameValuePairs.add(new BasicNameValuePair("commissioner", commissioner )); 
+	    nameValuePairs.add(new BasicNameValuePair("password", password )); 
+	    nameValuePairs.add(new BasicNameValuePair("deadline", deadline)); 
+	    
+	    DBAsyncTask task = new DBAsyncTask("createPool.php", nameValuePairs, tListener);
+	    
+	    task.execute();
+	}
 
 	@Override
 	public void onNotifyTaskCompleted(Object o) {
