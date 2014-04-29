@@ -194,6 +194,35 @@ public class DBManager implements TaskCompletedListener {
 		this.listener = listener;
 	}
 	
+	public void getAllUserPools(String user, TaskCompletedListener listener) {
+		if(user == null) { throw new NullPointerException("user was null");}
+		final TaskCompletedListener tListener = listener; 
+		List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(1);  
+	    nameValuePairs.add(new BasicNameValuePair("user", user )); 
+	    
+	    DBAsyncTask task = new DBAsyncTask("getAllUserPools.php", nameValuePairs, new TaskCompletedListener() {
+
+			@Override
+			public void onNotifyTaskCompleted(Object o) {
+				
+				List<String> list = new ArrayList<String>(); 
+				
+				try {
+					JSONArray jArray = new JSONArray((String)o);
+					for(int i=0;i<jArray.length();i++) {
+						JSONObject object = jArray.getJSONObject(i);
+						String name = object.getString("name");
+						list.add(name);
+					}
+				} catch (Exception e) {e.printStackTrace();}
+				
+				tListener.onNotifyTaskCompleted(list);
+			}
+	    	
+	    });
+	    task.execute();
+	}
+	
 	
 
 	@Override

@@ -1,6 +1,6 @@
 package com.example.pickem;
 
-import com.example.pickem.data.SharedObjects;
+
 
 import android.app.ActionBar;
 import android.os.Bundle;
@@ -12,23 +12,11 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
+
 
 
 public class MainActivity extends Activity implements ActionBar.TabListener{
-	private EditText userNameEditText;
-	private EditText passwordEditText;
-	private TextView userNameTextView;
-	private TextView password;
-	private Button loginButton;
-	private Button registerButton;
-	private Button helpButton;
-	private Button aboutButton;
-	private SharedObjects shared;
-	
+
 	private final String tab1Name = "Pools";
 	private final String tab3Name = "My Picks";
 	private final String tab4Name = "View Stats";
@@ -45,11 +33,11 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
         super.onCreate(savedInstanceState);
         ActionBar actionBar = getActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-        
         CreateTab(actionBar, tab1Name);
         CreateTab(actionBar, tab3Name);
         CreateTab(actionBar, tab4Name);
         setContentView(R.layout.activity_main);
+        
     }
     
     private void CreateTab(ActionBar actionBar, String displayName){
@@ -187,6 +175,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
         }
 		
 	}
+
 
 
 
