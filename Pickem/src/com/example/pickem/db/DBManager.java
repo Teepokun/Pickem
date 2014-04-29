@@ -14,11 +14,29 @@ import com.example.pickem.data.Team;
 import com.example.pickem.data.User;
 
 import android.util.Log;
-
+/**
+ * DBManager holds all the logic for interfacing with the database.
+ * It will call DBAsyncTask with the properly validated information 
+ * to pass to the db / query db.
+ * @author David Lindemann
+ *
+ */
 public class DBManager implements TaskCompletedListener {
-	
+	/** Will be deprecated soon. However holds interface to call back*/
 	private TaskCompletedListener listener;
 	
+	/**
+	 * Creates a user in the useraccount table in the DB based on the input paramaters.
+	 * <p>
+	 * User Accounts are comprised of the following information :
+	 * @param firstname - first name of the user
+	 * @param lastname - last name of the user
+	 * @param name - user name
+	 * @param password - password to the account
+	 * @param email - 
+	 * @param listener
+	 * @throws NullPointerException
+	 */
 	public void addUserAccount(String firstname, String lastname, String name, String password, String email, TaskCompletedListener listener) throws NullPointerException {
 		
 		final TaskCompletedListener fListener = listener;
@@ -41,6 +59,12 @@ public class DBManager implements TaskCompletedListener {
 		task.execute();
 	}
 	
+	/**
+	 * Authenticates user based on email and password
+	 * @param name - name of the user account to authenticate to
+	 * @param password - password of the user account to authenticate to
+	 * @param listener - interface to call back afterwards
+	 */
 	public void validateLogin(String name, String password, TaskCompletedListener listener) {
 		this.listener = listener;
 		if(name == null) { throw new NullPointerException("name was null");}
@@ -53,6 +77,12 @@ public class DBManager implements TaskCompletedListener {
 	    task.execute();
 	}
 	
+	/**
+	 * Gets the teams in the specified conference from the DB
+	 * @param name - name of the team
+	 * @param conference - name of the conference
+	 * @param listener - interface to call back afterwards
+	 */
 	public void getTeams(String name, String conference, TaskCompletedListener listener) {
 		this.listener = listener;
 		final TaskCompletedListener tListener = listener;
@@ -90,6 +120,13 @@ public class DBManager implements TaskCompletedListener {
 	    task.execute();
 	}
 	
+	/**
+	 * Returns a list of games based on search parameters
+	 * @param home - name of the home team
+	 * @param away - name of the away team
+	 * @param conference - name of the conference
+	 * @param listener - interface to call back afterwards
+	 */
 	public void getGame(String home, String away, String conference, TaskCompletedListener listener) {
 		final TaskCompletedListener tListener = listener;
 		if(home == null) { throw new NullPointerException("home was null");}
@@ -129,6 +166,14 @@ public class DBManager implements TaskCompletedListener {
 	    task.execute();
 	}
 	
+	/**
+	 * Checks if user exists
+	 * <p>
+	 * This has practical application for checking if a user account exists before creating one.
+	 * @param user - users cannot be duplicated in system and must be checked
+	 * @param email - emails cannot be duplicated in the system and must be checked
+	 * @param listener - interface to call back afterwards
+	 */
 	public void userExists(String user, String email, TaskCompletedListener listener) {
 		final TaskCompletedListener tListener = listener;
 		if(user == null) { throw new NullPointerException("home was null");}
@@ -161,6 +206,11 @@ public class DBManager implements TaskCompletedListener {
 	    task.execute();
 	}
 	
+	/**
+	 * Grabs user based on email address supplied during login
+	 * @param email - email to search for user account on
+	 * @param listener - interface to call back afterwards
+	 */
 	public void getUser(String email, TaskCompletedListener listener) {
 		final TaskCompletedListener tListener = listener;
 		if(email == null) { throw new NullPointerException("away was null");}
@@ -190,10 +240,20 @@ public class DBManager implements TaskCompletedListener {
 	    task.execute();
 	}
 	
+	/**
+	 * Don't use. Other ways preferable
+	 * @param listener - new listener to set the class to
+	 * @deprecated
+	 */
 	public void setListener(TaskCompletedListener listener) {
 		this.listener = listener;
 	}
 	
+	/**
+	 * Checks if pool exists, returning true | false to the interface
+	 * @param name - name of the pool to search for
+	 * @param listener - interface to call back afterwards
+	 */
 	public void doesPoolExist(String name, TaskCompletedListener listener) {
 		if(name == null) { throw new NullPointerException("name was null");}
 		final TaskCompletedListener tListener = listener; 
@@ -223,6 +283,11 @@ public class DBManager implements TaskCompletedListener {
 	    task.execute();
 	}
 	
+	/**
+	 * Returns all polls that a particular user belongs to
+	 * @param user - user to search for pools
+	 * @param listener - interface to call back afterwards
+	 */
 	public void getAllUserPools(String user, TaskCompletedListener listener) {
 		if(user == null) { throw new NullPointerException("user was null");}
 		final TaskCompletedListener tListener = listener; 
@@ -252,6 +317,17 @@ public class DBManager implements TaskCompletedListener {
 	    task.execute();
 	}
 	
+	/**
+	 * Creates a pool based on the given input. Params are self explanatory. 
+	 * <p>
+	 * However, deadline defaults to today, since time was sort.
+	 * @param name
+	 * @param conference
+	 * @param commissioner
+	 * @param password
+	 * @param deadline
+	 * @param listener
+	 */
 	public void createPool(String name, String conference, String commissioner, String password, String deadline, TaskCompletedListener listener) {
 		if(name == null) { throw new NullPointerException("name was null");}
 		if(conference == null) { throw new NullPointerException("conference was null");}
@@ -274,6 +350,10 @@ public class DBManager implements TaskCompletedListener {
 	}
 
 	@Override
+	/**
+	 * Used as a defualt interface. Mostly used for insertions, where the user won't care too much if that was 
+	 * successful or not.
+	 */
 	public void onNotifyTaskCompleted(Object o) {
 		if(listener != null) {
 			listener.onNotifyTaskCompleted(o);
