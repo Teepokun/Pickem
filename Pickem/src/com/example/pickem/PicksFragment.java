@@ -13,7 +13,7 @@ public class PicksFragment extends Fragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setHasOptionsMenu(true);
+		//setHasOptionsMenu(true);
 	}
 
 	@Override
@@ -22,10 +22,10 @@ public class PicksFragment extends Fragment {
 		return inflater.inflate(R.layout.picks_fragment, container, false);
 	}
 	
-	@Override
+	/*@Override
 	public void onCreateOptionsMenu(
 			Menu menu, MenuInflater inflater) {
 			inflater.inflate(R.menu.picks, menu);
 	}
-
+*/
 }

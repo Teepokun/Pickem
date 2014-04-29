@@ -10,7 +10,7 @@
         android:layout_gravity="center_horizontal|fill_horizontal"
         android:layout_weight="0.53"
         android:orientation="horizontal" >
-"
+
 
         <TableRow
             android:id="@+id/tableRow1"
