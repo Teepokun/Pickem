@@ -4,14 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:orientation="vertical" >
-
         <TextView
             android:id="@+id/create_pool_name_label"
             android:layout_width="wrap_content"
@@ -25,99 +17,58 @@
             android:ems="10"
             android:inputType="text" />
 
-        <TextView
-            android:id="@+id/create_pool_deadline_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="@string/submission_deadline" />
+                	
         
+		<CheckBox
+	        android:id="@+id/privacyCheckbox"
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/privatePool_check" />
+		
+		<EditText
+        android:id="@+id/createPool_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" 
+        android:visibility="invisible">
         
 
-        <EditText
-            android:id="@+id/RegistrationActivity_LastName_Entry"
+        <requestFocus />
+    </EditText>
+		
+		
+        <TextView
+            android:id="@+id/createPool_conferenceChoice_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10" 
-            android:inputType="text" />
-  
-        <TextView
-            android:id="@+id/RegistrationActivity_UsernameLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="@string/RegisterActivity_Username" />
-
-        <EditText
-            android:id="@+id/RegistrationActivity_Username_Entry"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10" 
-            android:inputType="text"/>
-
-        <TextView
-            android:id="@+id/RegistrationActivity_PasswordLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="@string/RegisterActivity_Password" />
-
-        <EditText
-            android:id="@+id/RegistrationActivity_Password_Entry"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword" />
-
-        <TextView
-            android:id="@+id/RegistrationActivity_ConfirmPasswordLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="@string/RegisterActivity_PasswordConf" />
-
-        <EditText
-            android:id="@+id/RegistrationActivity_ConfirmPassword_Entry"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword" />
+            android:text="@string/conferenceChoice_prompt" />
         
-        <TextView
-            android:id="@+id/RegistrationActivity_EmailLabel"
+        <CheckBox
+	        android:id="@+id/accCheckbox"
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/ACC" />
+		
+        <CheckBox
+	        android:id="@+id/secCheckbox"
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/SEC" />
+
+        <Button
+            android:id="@+id/createPool_submit_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="@string/RegisterActivity_Email" />
+            android:text="@string/createPool_button" />
 
-        <EditText
-            android:id="@+id/RegistrationActivity_Email_Entry"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/createPool_cancel_btn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textEmailAddress" />
+            android:text="@string/cancel_button" />
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/RegisterActivity_Cancel_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/RegisterActivity_Submit_Button"
-        android:layout_alignBottom="@+id/RegisterActivity_Submit_Button"
-        android:layout_marginLeft="45dp"
-        android:layout_toRightOf="@+id/RegisterActivity_Submit_Button"
-        android:text="@string/cancel_button" />
 
-    <Button
-        android:id="@+id/RegisterActivity_Submit_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/linearLayout1"
-        android:layout_below="@+id/linearLayout1"
-        android:layout_marginLeft="176dp"
-        android:layout_marginTop="42dp"
-        android:text="@string/RegisterActivity_Submit" />
-    
-
-</LinearLayout>

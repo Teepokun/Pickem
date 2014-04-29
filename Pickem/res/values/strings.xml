@@ -39,6 +39,15 @@
     <string name="friday">Friday</string>
     <string name="saturday">Saturday</string>
     <string name="sunday">Sunday</string> 
+    <string name="deadline_kickoff">Kickoff</string>
+    <string name="deadline_custom">Custom</string>
+    <string name="privatePool_check">Private?</string>
+    <string name="pool_password">Enter Password</string>
+    <string name="ACC">ACC</string>
+    <string name="SEC">SEC</string>
+    <string name="createPool_button">Create Pool</string>
+    <string name="conferenceChoice_prompt">What conferences would you like your pool to pick from?</string>
+    
     
      <string-array name="color_array">  
      <item>Yellow</item>   
