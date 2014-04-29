@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.5" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="com.example.pickem.LoginActivity" project="Pickem" 
+    file="/Pickem/src/com/example/pickem/LoginActivity.java" binary="false" label="loginActivity" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="155" y="0"/>    
+    <execution id="2">      
+      <position height="127" width="96" x="5" y="227"/>    
+    </execution>    
+    <execution id="5">      
+      <position height="21" width="7" x="50" y="291"/>    
+    </execution>  
+  </object>  
+  <object id="6" language="java" name="com.example.pickem.db.DBManager" project="Pickem" 
+    file="/Pickem/src/com/example/pickem/db/DBManager.java" binary="false" label="dbManager" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="147" y="0"/>    
+    <execution id="4">      
+      <position height="85" width="109" x="105" y="248"/>    
+    </execution>  
+  </object>  
+  <object id="10" language="java" name="com.example.pickem.MainActivity" project="Pickem" 
+    file="/Pickem/src/com/example/pickem/MainActivity.java" binary="false" label="mainActivity" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="361" y="0"/>    
+    <execution id="8">      
+      <position height="21" width="96" x="218" y="269"/>    
+    </execution>  
+  </object>  
+  <message id="3">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="7">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="5"/>  
+  </message>
+</sequence-diagram>

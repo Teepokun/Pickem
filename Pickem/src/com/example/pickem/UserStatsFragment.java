@@ -18,10 +18,18 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+/**
+ * Class that handles the creation and database linking of user's stats allowing them to be keep up to date in real time. 
+ * This fragment attaches to the main activity to show this information. 
+ * @author Sara Landset
+ *
+ */
 public class UserStatsFragment extends Fragment{
 	
-    /**
+	/**
      * Handles initial creation of fragment
+     * @param savedInstanceState if the fragment was previously
+     * created, its previous state will be passed in here, otherwise it's null
      */
 	 @Override
 	    public void onCreate(Bundle savedInstanceState) {
@@ -31,12 +39,23 @@ public class UserStatsFragment extends Fragment{
 	    }
 	
 	/**
-	* creates and returns the views associated with this fragment
+	*Handles initial creation of fragment's user interface view
+     * @param inflater the LayoutInflater object that inflates views in the fragment
+     * @param container the parent of the objects contained in the interface
+     * @param savedInstanceStateif the fragment was previously created, its previous state 
+     * will be passed in here, otherwise it's null
+     * @return any views associated with this layout
 	*/
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.stats_fragment, container, false);
     }
+	
+	/**
+	* gets any additional menu items associated with this fragment
+     * handles creation of pool spinner in action car
+     * @param inflater the LayoutInflater object that inflates views in the fragment
+     * */
 	
 	@Override
 	public void onCreateOptionsMenu(

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.5" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="com.example.pickem.LoginActivity" project="Pickem" 
+    file="/Pickem/src/com/example/pickem/LoginActivity.java" binary="false" label="loginActivity" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="145" y="0"/>    
+    <execution id="2">      
+      <position height="280" width="96" x="5" y="118"/>    
+    </execution>  
+  </object>  
+  <object id="5" language="java" name="com.example.pickem.db.DBManager" project="Pickem" 
+    file="/Pickem/src/com/example/pickem/db/DBManager.java" binary="false" label="dbManager" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="307" y="0"/>    
+    <execution id="4">      
+      <position height="238" width="109" x="105" y="139"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="70" width="7" x="156" y="223"/>    
+    </execution>  
+  </object>  
+  <object id="11" language="java" name="com.example.pickem.MainActivity" project="Pickem" 
+    file="/Pickem/src/com/example/pickem/MainActivity.java" binary="false" label="mainActivity" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="335" y="0"/>    
+    <execution id="7">      
+      <position height="196" width="96" x="218" y="160"/>    
+    </execution>  
+  </object>  
+  <object id="14" language="java" name="com.example.pickem.PoolsFragment" project="Pickem" 
+    file="/Pickem/src/com/example/pickem/PoolsFragment.java" binary="false" label="poolsFragment" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="405" y="0"/>    
+    <execution id="13">      
+      <position height="154" width="109" x="318" y="181"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="21" width="7" x="369" y="251"/>    
+    </execution>  
+  </object>  
+  <object id="17" language="java" name="com.example.pickem.JoinPoolDialog" project="Pickem" 
+    file="/Pickem/src/com/example/pickem/JoinPoolDialog.java" binary="false" label="joinPoolDialog" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="562" y="0"/>    
+    <execution id="16">      
+      <position height="112" width="107" x="431" y="202"/>    
+    </execution>  
+  </object>  
+  <message id="3">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="6">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </message>  
+  <message id="9">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="12">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="15">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="18">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>
+</sequence-diagram>

@@ -13,6 +13,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * Class that handles user registration. Offers a sign-up form and links 
+ * to the DB on successfull completion of registration. 
+ * @author Sara Landset, David Lindemann
+ *
+ */
 public class RegisterActivity extends Activity implements TaskCompletedListener{
 
 	
@@ -23,8 +29,10 @@ public class RegisterActivity extends Activity implements TaskCompletedListener{
 	private String email;
 	private Context savedContext;
 	
-    /**
-     * Handles initial creation of activity
+	/**
+     * Handles initial creation of activity and click listeners for the buttons
+     * @param savedInstanceState if the activity was previously
+     * created, its previous state will be passed in here, otherwise it's null
      */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +61,9 @@ public class RegisterActivity extends Activity implements TaskCompletedListener{
 	}
 
     /**
-     * Handles initial creation of activity
+     * Handles initial creation of activity's menu if different from main. 
+     * @param menu menu item
+     * @return true if options menu was successfully created
      */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -62,6 +72,10 @@ public class RegisterActivity extends Activity implements TaskCompletedListener{
 		return true;
 	}
 	
+	/**
+     * adding user to DB, checks all input for possible errors before registration is complete
+     * 
+     */
 	private void registerUserToDB() {
 		boolean cancel = false;
 		firstname = ((EditText) findViewById(R.id.RegistrationActivity_FirstName_Entry)).getText().toString();
@@ -102,6 +116,10 @@ public class RegisterActivity extends Activity implements TaskCompletedListener{
 
 	}
 
+	/**
+     * Observer method which allows for the Asynchronous 
+     * tasks to notify the caller when they are done executing
+     */
 	@Override
 	public void onNotifyTaskCompleted(Object o) {
 		String array[] = (String[]) o;

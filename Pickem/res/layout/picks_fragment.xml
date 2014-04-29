@@ -117,7 +117,7 @@
 
             <TextView
                 android:id="@+id/textHome4"
-                style="@style/AwayPicksText"
+                style="@style/HomePicksText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

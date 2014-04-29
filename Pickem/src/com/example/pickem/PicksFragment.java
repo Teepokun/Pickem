@@ -2,14 +2,11 @@ package com.example.pickem;
 
 import java.util.List;
 import java.util.Vector;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import com.example.pickem.data.SharedObjects;
 import com.example.pickem.db.DBManager;
 import com.example.pickem.db.TaskCompletedListener;
-
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
@@ -25,6 +22,11 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 
+/**
+ * Class that handles the creation and showing of the Picks fragment, which allows
+ * the users to make their weekly pool entries
+ * 
+ */
 public class PicksFragment extends Fragment {
 	private Vector<RadioButton> radioArray;
 	@Override
@@ -37,6 +39,14 @@ public class PicksFragment extends Fragment {
 		setHasOptionsMenu(true);
 	}
 
+	/**
+     * Handles initial creation of dialog's user interface view. sets listeners
+     * for buttons and checkboxes
+     * @param inflater the LayoutInflater object that inflates views in the dialog
+     * @param container the parent of the objects contained in the interface
+     * @param savedInstanceStateif the dialog was previously created, its previous state 
+     * will be passed in here, otherwise it's null
+     */
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -103,6 +113,11 @@ public class PicksFragment extends Fragment {
 		return v;
 	}
 	
+	/**
+	* gets any additional menu items associated with this fragment
+     * handles creation of pool spinner in action bar
+     * @param inflater the LayoutInflater object that inflates views in the fragment
+     * */
 	public void onCreateOptionsMenu(
 			Menu menu, MenuInflater inflater) {
 			inflater.inflate(R.menu.picks, menu);

@@ -8,6 +8,7 @@ import com.example.pickem.db.DBManager;
 import com.example.pickem.db.TaskCompletedListener;
 
 import android.app.Activity;
+import android.app.DialogFragment;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
@@ -22,6 +23,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+/**
+ * Class that handles the creation and showing of the CreatePool Dialog box, 
+ * contains a form the user can use to register the new pool. the dialog launches from the pools fragment. 
+ *
+ */
 public class PoolsFragment extends Fragment {
 	
 	@Override
@@ -32,6 +38,15 @@ public class PoolsFragment extends Fragment {
 		
 	}
 
+	/**
+	*Handles initial creation of fragment's user interface view. sets onclick listeners for 
+	*create and join dialogs
+     * @param inflater the LayoutInflater object that inflates views in the fragment
+     * @param container the parent of the objects contained in the interface
+     * @param savedInstanceStateif the fragment was previously created, its previous state 
+     * will be passed in here, otherwise it's null
+     * @return any views associated with this layout
+	*/
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -46,6 +61,7 @@ public class PoolsFragment extends Fragment {
             		FragmentManager fm = getFragmentManager();
                     JoinPoolDialog jp = new JoinPoolDialog();
                     jp.show(fm, "join_pool_dialog");
+                    jp.setStyle(DialogFragment.STYLE_NORMAL, android.R.style.Theme_Light_NoTitleBar);
                 
             }
         });
@@ -53,13 +69,20 @@ public class PoolsFragment extends Fragment {
 		createButton.setOnClickListener(new OnClickListener() {
         	public void onClick(final View v) {
         		FragmentManager fm = getFragmentManager();
-                CreatePoolDialog cp = new CreatePoolDialog();
+        		CreatePoolDialog cp = new CreatePoolDialog();
                 cp.show(fm, "create_pool_dialog");
+                cp.setStyle(DialogFragment.STYLE_NORMAL, android.R.style.Theme_Light_NoTitleBar);               
+                
        }
     });
 		return view;
 	}
 	
+	/**
+	* gets any additional menu items associated with this fragment
+     * handles creation of pool spinner in action car
+     * @param inflater the LayoutInflater object that inflates views in the fragment
+     * */
 	@Override
 	public void onCreateOptionsMenu(
 			Menu menu, MenuInflater inflater) {

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.5" icons="true">  
+  <object id="1" language="java" name="com.example.pickem.LoginActivity" project="Pickem" 
+    file="/Pickem/src/com/example/pickem/LoginActivity.java" binary="false" label="loginActivity" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="97" y="0"/>    
+    <execution id="2">      
+      <position height="237" width="96" x="5" y="214"/>    
+    </execution>  
+  </object>  
+  <object id="5" language="java" name="com.example.pickem.db.DBManager" project="Pickem" 
+    file="/Pickem/src/com/example/pickem/db/DBManager.java" binary="false" label="dbManager" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="205" y="0"/>    
+    <execution id="4">      
+      <position height="195" width="109" x="105" y="235"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="63" width="7" x="156" y="304"/>    
+    </execution>  
+  </object>  
+  <object id="11" language="java" name="com.example.pickem.MainActivity" project="Pickem" 
+    file="/Pickem/src/com/example/pickem/MainActivity.java" binary="false" label="mainActivity" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="439" y="0"/>    
+    <execution id="7">      
+      <position height="153" width="96" x="218" y="256"/>    
+    </execution>  
+  </object>  
+  <object id="14" language="java" name="com.example.pickem.UserStatsFragment" project="Pickem" 
+    file="/Pickem/src/com/example/pickem/UserStatsFragment.java" binary="false" label="userStatsFragment" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="507" y="0"/>    
+    <execution id="13">      
+      <position height="111" width="134" x="318" y="277"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="21" width="7" x="382" y="325"/>    
+    </execution>  
+  </object>  
+  <message id="3">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="6">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </message>  
+  <message id="9">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="12">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="15">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>
+</sequence-diagram>

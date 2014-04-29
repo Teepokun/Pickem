@@ -9,12 +9,14 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
+/**
+ * Class that handles the Main Activity - the heart of the User Interface. 
+ * Nearly all views in the app are linked with this. 
+ */
 
 public class MainActivity extends Activity implements ActionBar.TabListener{
 
@@ -34,6 +36,11 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
 	
 			
 	
+	/**
+     * Handles initial creation of activity and click listeners for the buttons
+     * @param savedInstanceState if the activity was previously
+     * created, its previous state will be passed in here, otherwise it's null
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +53,12 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
         
     }
     
+    /**
+     * creates tabs and places them on the action bar for app-wide navigation.
+     * @param actionBar the action bar
+     * @param displayName the name on the tab
+     * 
+     */
     private void CreateTab(ActionBar actionBar, String displayName){
 		ActionBar.Tab newTab = actionBar.newTab();
 		newTab.setText(displayName);
@@ -54,6 +67,11 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
 	}
 
 
+    /**
+     * Handles initial creation of activity's menu if different from main. 
+     * @param menu menu item
+     * @return true if options menu was successfully created
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -61,45 +79,12 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
         return true;
     }
     
-    
-    /*public void onPoolsClick(MenuItem menuItem) {
-    	Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    	PoolsFragment fragment = new PoolsFragment();
-    	FragmentManager fm = getFragmentManager();
-    	FragmentTransaction ft = fm.beginTransaction();
-    	ft.addToBackStack("Pools");
-    	
-    	ft.replace(android.R.id.content, fragment);
-    	ft.commit();
-     }*/
-
-    /*public void onPicksClick(MenuItem menuItem) {
-    	Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    	PicksFragment fragment = new PicksFragment();
-    	FragmentManager fm = getFragmentManager();
-    	FragmentTransaction ft = fm.beginTransaction();
-    	ft.addToBackStack("Picks");
-    	
-    	ft.replace(android.R.id.content, fragment);
-    	ft.commit();
-     }*/
-    
-    /*public void onUserStatsClick(MenuItem menuItem) {
-    	Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    	UserStatsFragment fragment = new UserStatsFragment();
-    	FragmentManager fm = getFragmentManager();
-    	FragmentTransaction ft = fm.beginTransaction();
-    	ft.addToBackStack("Stats");
-    	
-    	ft.replace(android.R.id.content, fragment);
-    	ft.commit();
-     }*/
-  
-    
-    
+     
+    /**
+     * Click listener for the about button on the action bar. 
+     * @param menuItem 
+     * 
+     */
     public void onAboutOptionClicked(MenuItem menuItem){
     	
     	FragmentManager fm = getFragmentManager();
@@ -111,7 +96,11 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
     	
     }
 
-    
+    /**
+     * Click listener for the help button on the action bar. 
+     * @param menuItem 
+     * 
+     */
     public void onHelpOptionClicked(MenuItem menuItem){
     	//Intent intent = new Intent(this, MainActivity.class);
         //startActivity(intent);
@@ -123,6 +112,12 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
     	ft.commit();
     }
 
+    /**
+     * Handles logic for when various tabs are selected - attaches or detaches fragments as necessary.
+     * @param tab the tab selected
+     * @param ft the fragment transaction which handles the attaching and detaching
+     * 
+     */
     @Override
 	public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft){
     	if(helpFragment.isAdded()){
@@ -166,12 +161,23 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
 	}
 
   
-  
+    /**
+     * Handles logic for when tabs are clicked on when they are already selected - they do nothing
+     * @param tab the tab selected
+     * @param ft the fragment transaction which handles the attaching and detaching
+     * 
+     */
 	@Override
 	public void onTabReselected(Tab tab, FragmentTransaction ft) {
 		
 	}
 
+	/**
+     * Handles detaches the current fragment when a new tab is selected.
+     * @param tab the tab selected
+     * @param ft the fragment transaction which handles the attaching and detaching
+     * 
+     */
 	@Override
 	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
 		CharSequence displayName = tab.getText();

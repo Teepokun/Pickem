@@ -355,7 +355,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int AwayPicksText=0x7f08000b;
         public static final int ButtonBar=0x7f080003;
         public static final int ButtonBarButton=0x7f080007;
-        public static final int FullscreenActionBarStyle=0x7f08000c;
+        public static final int DialogTheme=0x7f08000c;
+        public static final int FullscreenActionBarStyle=0x7f08000d;
         public static final int FullscreenTheme=0x7f080002;
         public static final int HomePicksText=0x7f08000a;
         public static final int LabelText=0x7f080009;

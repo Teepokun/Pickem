@@ -1,7 +1,7 @@
 package com.example.pickem;
 
+import android.app.Dialog;
 import android.app.DialogFragment;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,15 +11,31 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.CheckBox;
 import android.widget.Toast;
+
 import com.example.pickem.data.SharedObjects;
 import com.example.pickem.db.DBManager;
 import com.example.pickem.db.TaskCompletedListener;
 
+/**
+ * Class that handles the creation and showing of the CreatePool Dialog box, 
+ * contains a search item and will return to the user list of available pools to join as
+ * well as allow the user to request access to them. The dialog launches from the pool fragment. 
+ *
+ */
 public class CreatePoolDialog extends DialogFragment{
 	
+	/**
+     * Empty constructor. This is required to be able to show the dialog from its parent fragment
+     * 
+     */
 	public CreatePoolDialog(){
 		
 	}
+	/**
+     * Handles initial creation of dialog
+     * @param savedInstanceState if the dialog was previously
+     * created, its previous state will be passed in here, otherwise it's null
+     */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -27,12 +43,25 @@ public class CreatePoolDialog extends DialogFragment{
 				
 	}
 
+	/**
+     * Handles initial creation of dialog's user interface view. sets listeners
+     * for buttons and checkboxes
+     * @param inflater the LayoutInflater object that inflates views in the dialog
+     * @param container the parent of the objects contained in the interface
+     * @param savedInstanceStateif the dialog was previously created, its previous state 
+     * will be passed in here, otherwise it's null
+     */
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		
 		View view = inflater.inflate(R.layout.create_pool_dialog, container, false);
-		getDialog().setTitle("Create a Pool");
+		
+		Dialog dialog = getDialog();
+		dialog.setTitle("Create a Pool");
+		
+		
+
 		
 		CheckBox accBox = (CheckBox) view.findViewById(R.id.accCheckbox);
 		CheckBox secBox = (CheckBox) view.findViewById(R.id.secCheckbox);
@@ -78,6 +107,10 @@ public class CreatePoolDialog extends DialogFragment{
 						return view;
 	}
 	
+	/**
+     * Handles actual creation of new pool
+     * @param v the view
+     */
 	private void createPool(View v) {
 		EditText poolName = (EditText) v.findViewById(R.id.create_pool_name_entry);
 		final String name = poolName.getText().toString();
@@ -131,5 +164,9 @@ public class CreatePoolDialog extends DialogFragment{
 			
 		});
 		
+	}
+	public static CreatePoolDialog newInstance() {
+		CreatePoolDialog d = new CreatePoolDialog();
+		    return d;
 	}
 }
