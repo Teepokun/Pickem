@@ -4,5 +4,6 @@
     android:layout_height="match_parent" 
     android:id="@+id/poolSpinner"
     android:icon="@drawable/ic_menu_more"
-    android:entries="@array/color_array">
+    android:entries="@array/color_array"
+    android:layout_gravity="right">
  </Spinner>

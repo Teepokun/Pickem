@@ -48,6 +48,12 @@
     <string name="createPool_button">Create Pool</string>
     <string name="conferenceChoice_prompt">What conferences would you like your pool to pick from?</string>
     
+    <string name="stats_username">Username</string>
+    <string name="stats_rank">Rank: </string>
+    <string name="stats_seasonRecord">Season Record: </string>
+    <string name="stats_allTimeRecord">All Time Record: </string>
+    
+    <string name="logoDescription">Pickem Logo</string>
     
      <string-array name="color_array">  
      <item>Yellow</item>   

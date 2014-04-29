@@ -2,12 +2,46 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="18dp"
+        android:text="@string/stats_rank"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
     
-        <TextView
-        android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/statsFragmentTextView"
-            android:text="Stats Fragment Opened"/>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="18dp"
+        android:text="@string/stats_seasonRecord"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
     
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="18dp"
+        android:text="@string/stats_allTimeRecord"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="122dp"
+        android:text="@string/stats_username"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

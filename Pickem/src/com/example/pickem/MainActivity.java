@@ -24,7 +24,12 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
 	Fragment tab1Fragment;
 	Fragment tab3Fragment;
 	Fragment tab4Fragment;
+	
+	AboutUsFragment aboutFragment = new AboutUsFragment();
+	HelpFragment helpFragment = new HelpFragment();
 
+	boolean isAboutAttached = false;
+	boolean isHelpAttached = false;
 	
 			
 	
@@ -37,6 +42,8 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
         CreateTab(actionBar, tab3Name);
         CreateTab(actionBar, tab4Name);
         setContentView(R.layout.activity_main);
+        
+        
         
     }
     
@@ -95,47 +102,54 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
     
     
     public void onAboutOptionClicked(MenuItem menuItem){
-    	Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    	AboutUsFragment fragment = new AboutUsFragment();
+    	
     	FragmentManager fm = getFragmentManager();
     	FragmentTransaction ft = fm.beginTransaction();
     	ft.addToBackStack("About");
     	
-    	ft.replace(android.R.id.content, fragment);
+    	ft.replace(android.R.id.content, aboutFragment);
     	ft.commit();
+    	
     }
 
     
     public void onHelpOptionClicked(MenuItem menuItem){
-    	Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    	HelpFragment fragment = new HelpFragment();
+    	//Intent intent = new Intent(this, MainActivity.class);
+        //startActivity(intent);
     	FragmentManager fm = getFragmentManager();
     	FragmentTransaction ft = fm.beginTransaction();
     	ft.addToBackStack("Help");
     	
-    	ft.replace(android.R.id.content, fragment);
+    	ft.replace(android.R.id.content, helpFragment);
     	ft.commit();
     }
 
     @Override
 	public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft){
+    	if(helpFragment.isAdded()){
+    		ft.detach(helpFragment);
+    	}
+    	
+    	if(aboutFragment.isAdded()){
+    		ft.detach(aboutFragment);
+    	}
+    	
 		CharSequence displayName = tab.getText();
 		if(displayName.equals(tab1Name)){
 			if(tab1Fragment == null){
 				tab1Fragment  = new PoolsFragment();
-				ft.add(android.R.id.content, tab1Fragment);
+				ft.replace(android.R.id.content, tab1Fragment);
 			}
 			else{
 				ft.attach(tab1Fragment);
+				
 			}
 		}
 		
 		else if(displayName.equals(tab3Name)){
 			if(tab3Fragment == null){
 				tab3Fragment  = new PicksFragment();
-				ft.add(android.R.id.content, tab3Fragment);
+				ft.replace(android.R.id.content, tab3Fragment);
 			}
 			else{
 				ft.attach(tab3Fragment);
@@ -144,7 +158,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener{
 		else if(displayName.equals(tab4Name)){
 			if(tab4Fragment == null){
 				tab4Fragment  = new UserStatsFragment();
-				ft.add(android.R.id.content, tab4Fragment);
+				ft.replace(android.R.id.content, tab4Fragment);
 			}
 			else{
 				ft.attach(tab4Fragment);
