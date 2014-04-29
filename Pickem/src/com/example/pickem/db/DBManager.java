@@ -348,6 +348,17 @@ public class DBManager implements TaskCompletedListener {
 	    
 	    task.execute();
 	}
+	
+	public void savePick(String pick) {
+		if(pick == null) {throw new NullPointerException("pick was null");}
+			
+		List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(1);  
+		nameValuePairs.add(new BasicNameValuePair("pick", pick )); 
+		
+		DBAsyncTask task = new DBAsyncTask("savePick.php", nameValuePairs, this);
+	    
+	    task.execute();
+	}
 
 	@Override
 	/**
