@@ -16,7 +16,7 @@ import android.os.AsyncTask;
 /**
  * Asynchronous tasks run in the background. This is necessary to not block the UI thread during execution
  * of such things as network requests. Otherwise if there was a slow/interrupted connection, the UI thread
- * might never get a chance to run. 
+ * might never get a chance to run. Test string 
  * <p>
  * This particular AsyncTask is meant to handle all andoroid<->Database calls.
  * @author David Lindemann
