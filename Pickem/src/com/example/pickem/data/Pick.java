@@ -1,5 +1,7 @@
 package com.example.pickem.data;
 
+
+
 public class Pick {
 	private String gameID;
 	private String selection;

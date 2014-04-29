@@ -13,10 +13,6 @@ import android.widget.Button;
 
 public class MakePicksActivity extends Activity {
 
-	private PicksAdapter picksAdapter;
-	private Button saveButton;
-	private Vector<Pick> picks;
-	private SharedObjects shared;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +27,4 @@ public class MakePicksActivity extends Activity {
 		return true;
 	}
 	
-	private void savePicksToDB() {}
-	
-	private void getPicksFromDB() {}
-	
-	private void savePickToDB() {	}
 }

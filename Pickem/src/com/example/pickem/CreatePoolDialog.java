@@ -122,6 +122,7 @@ public class CreatePoolDialog extends DialogFragment{
 				}
 				else {
 					DBManager manager = new DBManager();
+					manager.addToPoolUsers();
 					manager.createPool(name, conference, objects.user.getUser(), pass, "blah", new TaskCompletedListener() {
 
 						@Override
